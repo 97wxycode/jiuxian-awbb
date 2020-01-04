@@ -1,0 +1,25 @@
+.search {
+  margin: 0 30rpx;
+  padding: 0 20rpx;
+  width: 87%;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  background: #f1edfd;
+  border-radius: 30rpx;
+  color: #93909f;
+  font-size: 25rpx;
+  position: fixed;
+  top: 20rpx;
+  z-index: 100;
+}
+
+.search-sticky{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.search .search-icon {
+  margin-right: 17rpx;
+}

@@ -1,0 +1,4 @@
+<view class="{search:!searchStatus,'search-sticky':searchStatus}">
+  <icon type="search" size="17" class="search-icon"></icon>
+  <text>搜索商品</text>
+</view>

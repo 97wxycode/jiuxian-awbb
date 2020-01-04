@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "component": true,
+  "usingComponents": {
+    "search":"/components/search/search",
+    "swiper":"./components/swiper/swiper"
+  }
 }

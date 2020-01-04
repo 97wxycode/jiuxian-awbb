@@ -1,1 +1,14 @@
-/* pages/index/index.wxss */
+.index-container{
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.index-container .main{
+  height: 100%;
+}
+
+.test{
+  height: 5000rpx;
+  background: #f00;
+}

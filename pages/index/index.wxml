@@ -1,3 +1,7 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
-<text>qa-wxy</text>
+<view class="index-container">
+  <scroll-view class="main" scroll-y bindscroll="scroll">
+    <search status="{{searchStatus}}"></search>
+    <swiper></swiper>
+    <view class="test"></view>
+  </scroll-view>
+</view>
