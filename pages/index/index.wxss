@@ -1,7 +1,6 @@
 .index-container{
   height: 100%;
   overflow: hidden;
-  position: relative;
 }
 
 .index-container .main{

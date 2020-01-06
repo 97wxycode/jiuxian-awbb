@@ -2,6 +2,21 @@
   <scroll-view class="main" scroll-y bindscroll="scroll">
     <search status="{{searchStatus}}"></search>
     <swiper></swiper>
-    <view class="test"></view>
+    <view class="test">
+      <view>flsfj</view>
+      <view>flsfj</view>
+      <view>flsfj</view>
+      <view>flsfj</view>
+      <view>flsfj</view>
+      <view>flsfj</view>
+      <view>flsfj</view>
+      <view>flsfj</view>
+      <view>flsfj</view>
+      <view>flsfj</view>
+      <view>flsfj</view>
+      <view>flsfj</view>
+      <view>flsfj</view>
+      <view>flsfj</view>
+    </view>
   </scroll-view>
 </view>

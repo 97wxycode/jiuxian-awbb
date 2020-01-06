@@ -9,17 +9,23 @@
   border-radius: 30rpx;
   color: #93909f;
   font-size: 25rpx;
+}
+
+.search-fixed {
   position: fixed;
   top: 20rpx;
   z-index: 100;
 }
 
-.search-sticky{
-  position: sticky;
+.search-sticky {
+  width: 100%;
+  padding: 20rpx 0;
+  position: fixed;
   top: 0;
   z-index: 100;
+  background: #0f0;
 }
 
-.search .search-icon {
+.search-icon {
   margin-right: 17rpx;
 }

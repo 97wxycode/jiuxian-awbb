@@ -1,4 +1,10 @@
-<view class="{search:!searchStatus,'search-sticky':searchStatus}">
+<view class="search search-fixed" wx:if="{{!searchStatus}}">
   <icon type="search" size="17" class="search-icon"></icon>
   <text>搜索商品</text>
+</view>
+<view class="search-sticky" wx:else="{{searchStatus}}">
+  <view class="search">
+    <icon type="search" size="17" class="search-icon"></icon>
+    <text>搜索商品</text>
+  </view>
 </view>

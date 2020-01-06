@@ -5,9 +5,6 @@ Component({
   data: {
     searchStatus:false
   },
-  methods: {
-
-  },
   observers: {
     status(newVal){
       this.setData({
