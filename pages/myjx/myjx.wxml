@@ -1,2 +1,73 @@
 <!--pages/myjx/myjx.wxml-->
-<text>pages/myjx/myjx.wxml</text>
+<view class="top-mine">
+  <view class="top-profile-wrapper">
+    <view class="login-btn">
+      <view>登陆注册</view>
+      <cover-image class="profile-arrow"    src="/resources/myjx/arrow.gif"></cover-image>
+    </view>
+    <view>
+      <cover-image class="profile"    src="/resources/myjx/profile.gif"></cover-image>
+    </view>
+   </view>
+</view>
+<view class="bar">
+  <view class="bar-top">
+    <text class="bar-myList">我的订单</text>
+    <text class="bar-allList">查看全部订单 ></text>
+  </view>
+  <view class="bar-buttom">
+    <view class="bar-button">
+      <cover-image class="bar-img" src="/resources/myjx/topbar1.png" />
+    待付款
+      <text></text>
+    </view>
+    <view class="bar-button">
+      <cover-image class="bar-img" src="/resources/myjx/topbar2.png" />
+    待发货
+      <text></text>
+    </view>
+    <view class="bar-button">
+      <cover-image class="bar-img" src="/resources/myjx/topbar3.png" />
+    待收货
+      <text></text>
+    </view>
+  </view>
+  
+</view>
+<view class="func-wrapper">
+  <view class="func">
+    <cover-image class="func-img" src="/resources/myjx/item1.gif"></cover-image>
+    <text class="func-text">待领取</text>
+    <text class="func-arrow">-></text>
+  </view>
+  <view class="func">
+    <cover-image class="func-img" src="/resources/myjx/item2.gif"></cover-image>
+    <text class="func-text">商品兑换</text>
+    <text class="func-arrow">-></text>
+  </view>
+  <view class="func">
+    <cover-image class="func-img" src="/resources/myjx/item3.gif"></cover-image>
+    <text class="func-text">优惠券</text>
+    <text class="func-arrow">-></text>
+  </view>
+  <view class="func">
+    <cover-image class="func-img" src="/resources/myjx/item4.gif"></cover-image>
+    <text class="func-text">津贴</text>
+    <text class="func-arrow">-></text>
+  </view>
+  <view class="func">
+    <cover-image class="func-img" src="/resources/myjx/item5.gif"></cover-image>
+    <text class="func-text">地址管理</text>
+    <text class="func-arrow">-></text>
+  </view>
+  <view class="func">
+    <cover-image class="func-img" src="/resources/myjx/item6.gif"></cover-image>
+    <text class="func-text">会员频道兑换记录</text>
+    <text class="func-arrow">-></text>
+  </view>
+  <view class="func">
+    <cover-image class="func-img" src="/resources/myjx/item6.gif"></cover-image>
+    <text class="func-text">会员频道</text>
+    <text class="func-arrow">-></text>
+  </view>
+</view>
