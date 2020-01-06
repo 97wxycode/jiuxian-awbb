@@ -1,0 +1,22 @@
+<view class="navbar">
+  <view class="item">
+    <image src="/resources/imgs/navbar01.png"></image>
+    <text>拼团</text>
+  </view>
+  <view class="item">
+    <image src="/resources/imgs/navbar01.png"></image>
+    <text>拼团</text>
+  </view>
+  <view class="item">
+    <image src="/resources/imgs/navbar01.png"></image>
+    <text>拼团</text>
+  </view>
+  <view class="item">
+    <image src="/resources/imgs/navbar01.png"></image>
+    <text>拼团</text>
+  </view>
+  <view class="item">
+    <image src="/resources/imgs/navbar01.png"></image>
+    <text>拼团</text>
+  </view>
+</view>
