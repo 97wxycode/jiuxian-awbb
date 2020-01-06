@@ -1,4 +1,4 @@
-// pages/mine/mine.js
+// pages/myjx/myjx.js
 Page({
 
   /**
