@@ -1,4 +1,4 @@
-// pages/index/components/activity-count/activity-count.js
+// pages/index/components/shop-item/shop-item.js
 Component({
   /**
    * 组件的属性列表
@@ -18,9 +18,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    clickHandler(e){
-      const query = wx.createSelectorQuery().in(this)
-      console.log(query)
-    }
+
   }
 })

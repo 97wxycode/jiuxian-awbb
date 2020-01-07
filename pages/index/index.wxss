@@ -6,8 +6,3 @@
 .index-container .main{
   height: 100%;
 }
-
-.test{
-  height: 5000rpx;
-  background: #f00;
-}
