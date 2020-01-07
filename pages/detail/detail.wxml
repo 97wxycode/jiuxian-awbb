@@ -1,0 +1,86 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail-page">
+  <view class="detail-container">
+    <!-- 轮播图 -->
+    <swiper indicator-dots="true" autoplay interval="{{interval}}" duration="{{duration}}" class="swiper-img">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}">
+            <view>{{item}}</view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 商品信息 -->
+    <view class="product-info">
+      <view class="product-title">
+        <view class="product-type">自营</view>
+        <view>52`C酒鬼湘泉老坛500ml</view>
+      </view>
+      <view class="product-act">数量有限，先到先得</view>
+      <view class="product-price">
+        <view class="now-price">￥39.00</view>
+        <view class="after-price">酒仙价:59.00</view>
+      </view>
+      <view class="member">
+        <view class="club">CLUB</view>
+        <view class="club-act">会员下单再享98折，可省0.78元</view>
+      </view>
+      <view class="rush-time">
+        <view class="rush-icon">限时抢购</view>
+        <view>剩余10时24分22秒</view>
+      </view>
+    </view>
+    <!-- 商品优惠 -->
+    <view class="product-discount tab-tr">
+      <view class="tab-left">优惠</view>
+      <view class="tab-right">
+        <view class="discount-icon">
+          买一赠一
+        </view>
+        <view>沃德古堡买一送一</view>
+      </view>
+    </view>
+    <!-- 商品规格 -->
+    <view class="product-specs">
+      <view class="tab-tr">
+        <view class="tab-left">赠品</view>
+        <view class="tab-right">
+          <view>沃德古堡单一麦芽精酿啤酒500ml*12</view>
+        <view class="right-right">x1</view>
+        </view>
+      </view>
+      <view class="tab-tr">
+        <view class="tab-left">金币</view>
+        <view class="tab-right">
+          <view class="money">赠送
+            <view class="red">49</view>金币</view>
+        </view>
+      </view>
+      <view class="tab-tr">
+        <view class="tab-left">数量</view>
+        <view class="tab-right">
+          <view class="count-control">
+            <view>-</view>
+            <input class="count" type="number" value="1" />
+            <view>+</view>
+          </view>
+        </view>
+      </view>
+      <view class="tab-tr">
+        <view class="tab-left">送至</view>
+        <view class="tab-right">
+          <view>北京，北京市，东城区</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <view class="cart">
+      <cover-image src="/resources/icons/05采购-线性.png" />
+      <view>购物车</view>
+    </view>
+    <view class="add-cart">加入购物车</view>
+    <view class="buy-now">立刻购买</view>
+  </view>
+</view>
