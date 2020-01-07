@@ -9,7 +9,7 @@ Page({
           console.log(res.code)
           //发起网络请求
           wx.request({
-            url: 'http://139.129.240.185:7777/login',
+            url: 'https://lisusususuli.top/login',
             data: {
               code: res.code
             }
