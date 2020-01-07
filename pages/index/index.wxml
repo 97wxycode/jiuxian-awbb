@@ -2,6 +2,8 @@
   <scroll-view class="main" scroll-y bindscroll="scroll">
     <search status="{{searchStatus}}"></search>
     <swiper></swiper>
+    <navbar></navbar>
+    <activity-count></activity-count>
     <view class="test">
       <view>flsfj</view>
       <view>flsfj</view>

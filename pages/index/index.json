@@ -2,6 +2,8 @@
   "component": true,
   "usingComponents": {
     "search":"/components/search/search",
-    "swiper":"./components/swiper/swiper"
+    "swiper":"./components/swiper/swiper",
+    "navbar":"./components/navbar/navbar",
+    "activity-count":"./components/activity-count/activity-count"
   }
 }
