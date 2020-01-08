@@ -1,0 +1,8 @@
+<view class="activity-count">
+  <view class="miaopai">
+    <image src="/resources/imgs/miaopai.png"></image>
+  </view>
+  <view class="qianggou">
+
+  </view>
+</view>

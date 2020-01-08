@@ -1,0 +1,24 @@
+.activity-count{
+  background: #f3f4f5;
+  height: 263rpx;
+  padding-top: 38rpx;
+  box-sizing: border-box;
+}
+
+.activity-count .miaopai{
+  height: 140rpx;
+  background: #fff;
+  position: relative;
+}
+
+.miaopai image{
+  width: 150rpx;
+  height: 50rpx;
+  position: absolute;
+  top: -25rpx;
+  left: 0;
+}
+
+.activity-count .qianggou{
+  height: 82rpx;
+}

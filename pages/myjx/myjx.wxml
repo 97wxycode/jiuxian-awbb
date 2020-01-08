@@ -1,4 +1,4 @@
-<!--pages/myjx/myjx.wxml-->
+
 <view class="top-mine">
   <view class="top-profile-wrapper">
     <view class="login-btn">

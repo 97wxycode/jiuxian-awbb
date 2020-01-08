@@ -1,0 +1,24 @@
+.navbar{
+  height: 203rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.item image{
+  width: 85rpx;
+  height: 85rpx;
+  margin-bottom: 20rpx;
+}
+
+.item text{
+  font-size: 22rpx;
+  line-height: 22rpx;
+}
