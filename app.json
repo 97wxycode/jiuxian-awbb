@@ -1,9 +1,13 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/category/category",
+    "pages/wineList/wineList",
+    "pages/index/index",
+    
+    
     "pages/cart/cart",
     "pages/myjx/myjx"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
