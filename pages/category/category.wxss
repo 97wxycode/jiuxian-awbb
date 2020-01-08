@@ -1,1 +1,26 @@
 /* pages/category/category.wxss */
+/* 假搜索框 */
+.searchWrap{
+  width: 100%;
+  display: flex;
+}
+.searchContent{
+  width: 100%;
+  height: 60rpx;
+  background-color: #f2f2f2;
+  margin: 20rpx 32rpx;
+  border-radius: 30rpx;
+  display: flex;
+}
+.search-icon{
+  width: 68rpx;
+  height: 100%;
+  text-align: center;
+  line-height: 68rpx;
+}
+.content{
+  flex: 1;
+  color: #a0a0a0;
+  font-size: 28rpx;
+  line-height: 60rpx;
+}

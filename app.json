@@ -1,9 +1,11 @@
 {
   "pages": [
+    "pages/allList/allList",
     "pages/myjx/myjx",
-    "pages/index/index",
     "pages/category/category",
+    "pages/index/index",
     "pages/cart/cart"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,22 +14,33 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "color": "#686868",
+    "selectedColor": "#dd4b44",
+    "borderStyle":"black",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath":"/resources/imgs/home.png",
+        "selectedIconPath":"/resources/imgs/home-on.png"
       },
       {
         "pagePath": "pages/category/category",
-        "text": "分类1"
+        "text": "分类",
+        "iconPath": "/resources/imgs/cate.png",
+        "selectedIconPath": "/resources/imgs/cate-on.png"
       },
       {
         "pagePath": "pages/cart/cart",
-        "text": "购物车"
+        "text": "购物车",
+        "iconPath": "/resources/imgs/cart.png",
+        "selectedIconPath": "/resources/imgs/cart-on.png"
       },
       {
         "pagePath": "pages/myjx/myjx",
-        "text": "我的酒仙"
+        "text": "我的酒仙",
+        "iconPath": "/resources/imgs/my.png",
+        "selectedIconPath": "/resources/imgs/my-on.png"
       }
     ]
   },

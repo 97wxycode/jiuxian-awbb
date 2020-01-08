@@ -1,0 +1,26 @@
+<!--miniprogram/custom-tab-bar/index.wxml-->
+<cover-view class="tab-bar">
+  <cover-view class="tab-bar-border"></cover-view>
+  <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <cover-view style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</cover-view>
+  </cover-view>
+</cover-view>
+<view>
+  <view class="goods-item">
+    <view class="goods-top">
+      <view class="goods-top-left">
+        <cover-image src="/resources/myjx/logo-small.gif"></cover-image>
+        <text>酒仙</text>
+      </view>
+      <view class="goods-top-status">等待付款</view>
+    </view>
+    <view class="goods-content">
+      <cover-image class="goods-img" src="/resources/myjx/goods-small.gif"></cover-image>
+      <view class="goods-name">嘿嘿嘿哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿</view>
+      <view class="goods-info">
+        <view class="goods-price">￥68.00</view>
+        <view class="goods-quantity">x1</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+/* pages/allList/allList.wxss */
+page{
+  background: #f3f4f5;
+}
+.tabbar>view>view:first-child{
+  display:none!important;
+}
+.tabbar>view{
+  background: #fff;
+  height:79rpx;
+  border-bottom: 1px solid #f3f4f5 !important;
+  padding:0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tabbar .weui-tabbar__label{
+  font-size: 26rpx;
+}
+.weui-tabbar__label{
+  color:red!important;
+}
