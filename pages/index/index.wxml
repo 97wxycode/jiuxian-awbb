@@ -1,9 +1,9 @@
 <view class="index-container">
   <scroll-view class="main" scroll-y bindscroll="scroll">
     <search status="{{searchStatus}}"></search>
-    <swiper></swiper>
+    <swiper class="swiper"></swiper>
     <navbar></navbar>
-    <activity-count></activity-count>
+    <activity-count status="{{countStatus}}"></activity-count>
     <shop-list></shop-list>
   </scroll-view>
 </view>

@@ -1,13 +1,101 @@
 .shop-item{
   height: 267rpx;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #e8e8e8;
   background: #fff;
-  padding: 0 20rpx;
+  box-sizing: border-box;
+  padding: 34rpx 20rpx 36rpx;
   display: flex;
   align-items: center;
+}
+
+.shop-item-border-none{
+  border-bottom: none;
 }
 
 .shop-item image{
   width: 187rpx;
   height: 200rpx;
+}
+
+.shop-item .middle{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 40rpx;
+}
+
+.middle .tit{
+  color: #333;
+  font-size: 26rpx;
+}
+
+.middle .desc{
+  color: #a6a6a6;
+  font-size: 23rpx;
+  line-height: 23rpx;
+  margin-top: 19rpx;
+}
+
+.middle .price{
+  margin-top: 64rpx;
+  color: #e96560;
+}
+
+.price .curr_price .symbol{
+  font-size: 18rpx;
+}
+
+.middle .price .del_price{
+  margin-left: 10rpx;
+  font-size: 18rpx;
+  color: #a2a2a2;
+  text-decoration: line-through;
+}
+
+.sales{
+  margin-top: 20rpx;
+  color: #999;
+  font-size: 23rpx;
+  display: flex;
+  align-items: center;
+}
+
+.sales .process{
+  margin-left: 16rpx;
+  width: 140rpx;
+  height: 12rpx;
+  background: #f0f0f0;
+  position: relative;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+
+.sales .process .process-inner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #e96560;
+  width: 50%;
+  height: 100%;
+  border-radius: 15rpx;
+}
+
+.right{
+  width: max-content;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.right .buy{
+  color: #fff;
+  font-size: 26rpx;
+  width: 130rpx;
+  height: 50rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 50rpx;
+  background: #e16059;
+  position: relative;
+  top: 60%;
 }

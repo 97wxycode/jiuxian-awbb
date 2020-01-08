@@ -11,6 +11,12 @@
   position: relative;
 }
 
+.activity-count .miaopai-sticky {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
 .miaopai image {
   width: 150rpx;
   height: 50rpx;

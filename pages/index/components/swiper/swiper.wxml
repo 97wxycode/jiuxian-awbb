@@ -1,8 +1,8 @@
 <view class="swiper-wrap">
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <swiper class="swiper-inner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{background}}" wx:key="*this">
       <swiper-item>
-        <view class="swiper-item {{item}}"></view>
+        <image src="{{item}}"></image>
       </swiper-item>
     </block>
   </swiper>
