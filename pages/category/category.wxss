@@ -3,6 +3,7 @@
 .searchWrap{
   width: 100%;
   display: flex;
+  border-bottom: 1rpx solid #f2f2f2;
 }
 .searchContent{
   width: 100%;
