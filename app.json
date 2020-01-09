@@ -2,10 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/category/category",
-    "pages/wineList/wineList",
     "pages/cart/cart",
-    "pages/myjx/myjx"
-    
+    "pages/myjx/myjx",
+    "pages/wineList/wineList",
+    "pages/allList/allList"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -45,5 +45,4 @@
     ]
   },
   "sitemapLocation": "sitemap.json"
-  
 }

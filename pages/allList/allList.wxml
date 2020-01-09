@@ -1,0 +1,34 @@
+<!--miniprogram/custom-tab-bar/index.wxml-->
+<cover-view class="tab-bar">
+  <cover-view class="tab-bar-border"></cover-view>
+  <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <cover-view style="color: {{selected == index ? '#e96560' : 'black'}}">{{item.text}}</cover-view>
+  </cover-view>
+</cover-view>
+<view>
+  <view wx:for="{{goodsList}}" wx:key="proId" class="goods-item">
+    <view class="goods-top">
+      <view class="goods-top-left">
+        <cover-image src="/resources/myjx/logo-small.gif"></cover-image>
+        <text>酒仙</text>
+      </view>
+      <view class="goods-top-status"> {{item.status===1?"等待付款":item.status===2?"待发货":"待收货"}} </view>
+    </view>
+    <view class="goods-content">
+      <cover-image class="goods-img" src="{{item.proImg}}"></cover-image>
+      <view class="goods-name">{{item.proName}}</view>
+      <view class="goods-info">
+        <view class="goods-price">￥{{item.proPrice}}</view>
+        <view class="goods-quantity">x{{item.count}}</view>
+      </view>
+    </view>
+    <view class="goods-summary">
+        <text class="goods-summary-text">共<text class="goods-summary-quantity">{{item.count}}</text>件商品</text>
+         应付金额:<text class="goods-summary-price">￥{{item.proPrice}}</text>
+    </view>
+    <view class="goods-btn-wrapper">
+      <view wx:if="{{item.status===1}}" class="goods-btn">去支付</view>
+      <view wx:if="{{item.status!=1}}" class="goods-btn">查看详情</view>
+    </view>
+  </view>
+</view>
