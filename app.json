@@ -16,13 +16,13 @@
   "tabBar": {
     "color": "#686868",
     "selectedColor": "#dd4b44",
-    "borderStyle":"black",
+    "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath":"/resources/imgs/home.png",
-        "selectedIconPath":"/resources/imgs/home-on.png"
+        "iconPath": "/resources/imgs/home.png",
+        "selectedIconPath": "/resources/imgs/home-on.png"
       },
       {
         "pagePath": "pages/category/category",
@@ -45,4 +45,5 @@
     ]
   },
   "sitemapLocation": "sitemap.json"
+  
 }

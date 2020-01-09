@@ -4,21 +4,6 @@
     <swiper></swiper>
     <navbar></navbar>
     <activity-count></activity-count>
-    <view class="test">
-      <view>flsfj</view>
-      <view>flsfj</view>
-      <view>flsfj</view>
-      <view>flsfj</view>
-      <view>flsfj</view>
-      <view>flsfj</view>
-      <view>flsfj</view>
-      <view>flsfj</view>
-      <view>flsfj</view>
-      <view>flsfj</view>
-      <view>flsfj</view>
-      <view>flsfj</view>
-      <view>flsfj</view>
-      <view>flsfj</view>
-    </view>
+    <shop-list></shop-list>
   </scroll-view>
 </view>

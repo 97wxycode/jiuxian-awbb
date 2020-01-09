@@ -1,8 +1,64 @@
 <view class="activity-count">
   <view class="miaopai">
     <image src="/resources/imgs/miaopai.png"></image>
+    <scroll-view class='time-list' scroll-x enable-flex>
+      <view class='item active' bindtap="clickHandler">
+        <text class='hour'>19:00</text>
+        <text class='mess'>正在进行</text>
+        <view class='line'></view>
+      </view>
+      <view data-tt="text" class='item' bindtap="clickHandler">
+        <text class='hour'>19:00</text>
+        <text class='mess'>正在进行</text>
+        <view class='line'></view>
+      </view>
+      <view class='item' bindtap="clickHandler">
+        <text class='hour'>19:00</text>
+        <text class='mess'>正在进行</text>
+        <view class='line'></view>
+      </view>
+      <view class='item' bindtap="clickHandler">
+        <text class='hour'>19:00</text>
+        <text class='mess'>正在进行</text>
+        <view class='line'></view>
+      </view>
+      <view class='item' bindtap="clickHandler">
+        <text class='hour'>19:00</text>
+        <text class='mess'>正在进行</text>
+        <view class='line'></view>
+      </view>
+      <view class='item' bindtap="clickHandler">
+        <text class='hour'>19:00</text>
+        <text class='mess'>正在进行</text>
+        <view class='line'></view>
+      </view>
+      <view class='item' bindtap="clickHandler">
+        <text class='hour'>19:00</text>
+        <text class='mess'>正在进行</text>
+        <view class='line'></view>
+      </view>
+      <view class='item' bindtap="clickHandler">
+        <text class='hour'>19:00</text>
+        <text class='mess'>正在进行</text>
+        <view class='line'></view>
+      </view>
+    </scroll-view>
   </view>
   <view class="qianggou">
-
+    <text class='tit'>疯狂抢购中</text>
+    <view class='countdown'>
+      <text class='jiushu'>距结束</text>
+      <view class='hour'>
+        <text>08</text>
+      </view>
+      <text class='spec'>:</text>
+      <view class='minute'>
+        <text>33</text>
+      </view>
+      <text class='spec'>:</text>
+      <view class='secound'>
+        <text>00</text>
+      </view>
+    </view>
   </view>
 </view>
