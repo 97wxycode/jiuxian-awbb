@@ -1,4 +1,4 @@
-// pages/search/search-history/search_history.js
+// pages/index/components/navbar/navbar.js
 Component({
   /**
    * 组件的属性列表

@@ -10,9 +10,10 @@ Component({
   },
 
   data: {
-    keywords:'',
-    list: [], 
-    searchRecord:[]
+    keywords: '',
+    list: [],
+    searchRecord: [],
+    historyList: wx.getStorageSync('searchRecord') || []
   },
   lifetimes: {
     created: function () {
@@ -22,10 +23,10 @@ Component({
       this.openHistorySearch();
     },
     attached: function () {
-      
+
     },
-    ready:function () {
-      
+    ready: function () {
+
     }
   },
   methods: {
@@ -35,54 +36,78 @@ Component({
         keywords: value
       })
       let searchRecord = this.data.searchRecord
-      
-      if (searchRecord.length < 5) {
-        searchRecord.unshift({
-          value: value,
-          id: searchRecord.length
+      if (value !== '') {
+        let item = searchRecord.find((val) => {
+          return val.value === value
         })
-      } else {
-        searchRecord.pop() //删掉旧的时间最早的第一条
-        searchRecord.unshift({
-          value: value,
-          id: searchRecord.length
-        })
+        if (item) {
+        }else{
+          if (searchRecord.length < 25) {
+            searchRecord.unshift({
+              value: value,
+              id: searchRecord.length
+            })
+          } else {
+            searchRecord.pop() //删掉旧的时间最早的第一条
+            searchRecord.unshift({
+              value: value,
+              id: searchRecord.length
+            })
+          }
+          wx.setStorageSync('searchRecord', searchRecord)
+        }
       }
-      wx.setStorageSync('searchRecord', searchRecord)
+
       console.log(this.data.searchRecord, '0000')
       return new Promise((resolve, reject) => {
         resolve()
       })
-      .then(() =>{
-        let that = this
-        wx.request({
-          url: 'https://newapplist.jiuxian.com/search/associateHistorySearch.htm?appKey=374f336c-263a-4c74-8e18-f5f0ce261c73&areaId=500&channelCode=0, 1&deviceType=ANDROID',
-          data: {
-            keyword: value
-          },
-          header: {
-            'content-type': 'application/json' // 默认值
-          },
-          success(res) {
-            if (res.data.success === '1') {
-              let result = res.data.result.result.assHotPojos
-              for(let i = 0;i<result.length;i++){
-                let leg = that.data.keywords.split('').length
-                result[i].name_key = result[i].name.substring(0,leg)
-                result[i].name_content = result[i].name.substring(leg, result[i].length)
-                result[i].id = i
+        .then(() => {
+          let that = this
+          wx.request({
+            url: 'https://newapplist.jiuxian.com/search/associateHistorySearch.htm?appKey=374f336c-263a-4c74-8e18-f5f0ce261c73&areaId=500&channelCode=0, 1&deviceType=ANDROID',
+            data: {
+              keyword: value
+            },
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success(res) {
+              if (res.data.success === '1') {
+                let result = res.data.result.result.assHotPojos
+                for (let i = 0; i < result.length; i++) {
+                  let leg = that.data.keywords.split('').length
+                  result[i].name_key = result[i].name.substring(0, leg)
+                  result[i].name_content = result[i].name.substring(leg, result[i].length)
+                  result[i].id = i
+                }
+                that.setData({
+                  list: result
+                })
+              } else {
+                wx.showToast({
+                  title: '请您换一个关键词试试！',
+                  icon: 'success',
+                  duration: 300
+                })
               }
-              that.setData({
-                list: result
-              })
-            } else {
-              that.setData({
-                list: ['请换一个关键字试试']
-              })
             }
-          }
+          })
         })
+    },
+    handleClear() {
+      this.setData({
+        keywords: ''
       })
+      // try {
+      //   wx.clearStorageSync()
+      // } catch (e) {
+      //   wx.showToast({
+      //     title: e,
+      //     icon: 'success',
+      //     duration: 2000
+      //   })
+      // }
     },
     openHistorySearch: function () {
       this.setData({

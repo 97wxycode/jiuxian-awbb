@@ -1,0 +1,13 @@
+.shop-item{
+  height: 267rpx;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.shop-item image{
+  width: 187rpx;
+  height: 200rpx;
+}

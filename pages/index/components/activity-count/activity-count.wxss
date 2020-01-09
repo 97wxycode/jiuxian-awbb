@@ -1,0 +1,114 @@
+.activity-count {
+  background: #f3f4f5;
+  height: 263rpx;
+  padding-top: 38rpx;
+  box-sizing: border-box;
+}
+
+.activity-count .miaopai {
+  height: 140rpx;
+  background: #fff;
+  position: relative;
+}
+
+.miaopai image {
+  width: 150rpx;
+  height: 50rpx;
+  position: absolute;
+  top: -25rpx;
+  left: 0;
+}
+
+.miaopai .time-list {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: #6f6f6f;
+  padding: 0 53rpx;
+  box-sizing: border-box;
+}
+
+.time-list .item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 90rpx;
+}
+
+.time-list .item:last-child {
+  margin-right: 0;
+}
+
+.time-list .item.active {
+  color: #fb5a5a;
+}
+
+.time-list .item.active .line {
+  background: #fb5a5a;
+}
+
+.time-list .item .hour {
+  padding-top: 45rpx;
+  font-size: 26rpx;
+}
+
+.time-list .item .mess {
+  width: max-content;
+  font-size: 23rpx;
+}
+
+.time-list .item .line {
+  width: 65%;
+  height: 6rpx;
+  background: transparent;
+  border-radius: 15rpx 15rpx 0 0;
+}
+
+.activity-count .qianggou {
+  height: 82rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+}
+
+.qianggou .tit {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.qianggou .countdown {
+  display: flex;
+  align-items: center;
+}
+
+.countdown .jiushu {
+  color: #666;
+  font-size: 20rpx;
+  margin-right: 18rpx;
+}
+
+.countdown .spec {
+  margin: 0 8rpx;
+}
+
+.countdown view {
+  width: 45rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 5rpx;
+  color: #000;
+  font-size: 19rpx;
+  font-weight: bold;
+  background: #fff;
+}
+
+.countdown .secound {
+  color: #fb5a5a;
+}
