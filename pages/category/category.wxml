@@ -1,12 +1,5 @@
 <view class="categoryWrap">
-    <view class="searchWrap">
-      <view class="searchContent">
-        <view class="search-icon">
-          <icon type="search" size="34rpx"/>
-        </view> 
-        <view class="content">
-          <text>搜索商品</text>
-        </view>
-      </view>
-    </view>
+  <search  
+    bindtap = "clickToSearch"
+  />
 </view>

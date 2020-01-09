@@ -1,0 +1,80 @@
+<view class="search-Warp">
+  <my-searchbar 
+    focus="true" 
+    ext-class="MySearchbar"  
+    search="{{search}}" 
+    />
+  <view 
+    class="searchHistory" wx:if="{{keywords===''}}">
+    <view class="heard">
+      <text>历史搜索</text>
+    </view>
+    <view class="history-content">
+      <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+     <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+      <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+      <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+      <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+      <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+      <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+      <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+      <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+      <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+      <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+       <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+      <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+      <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+      <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+      <view class="history-item">
+        <text>不锈钢</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="list-Wrap" wx:else>
+    <view class="list-content">
+      <view class="list-item" wx:for="{{list}}" wx:key="{{item.count+item.id}}">
+        <view class="item-left ietmCon">
+          <text class="name_key">{{ item.name_key}}</text>
+          <text>{{item.name_content}}</text>
+        </view>
+        <view class="item-right ietmCon" wx:if="{{list.lenght !== 0}}">
+          <text >约{{item.count}}条</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <my-searchHistory class="my-history" wx:if="{{keywords===''}}"/> -->
+  <!-- <my-searchList list="{{list}}" class="my-list" wx:if="{{keywords !==''}}"/> -->
+</view>

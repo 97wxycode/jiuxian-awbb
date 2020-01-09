@@ -1,0 +1,32 @@
+/* pages/search/search-history/search_history.wxss */
+.searchHistory{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.heard{
+  width: 100%;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #666;
+  /* border-top: 1px solid #f1f1f1; */
+  line-height: 80rpx;
+}
+.heard text{
+  margin-left: 20rpx;
+}
+.content{
+  /* height: 100%; */
+  width: 100%;
+  margin-left: 20rpx;
+  overflow-y:scroll;
+}
+.item{
+  height: 90rpx;
+  width: 100%;
+  font-size: 28rpx;
+  color: #6b6b6b;
+  line-height: 90rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
