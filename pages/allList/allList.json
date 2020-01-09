@@ -1,4 +1,5 @@
 {
+  "component":true,
   "navigationBarTitleText": "商品订单",
   "usingComponents": {
     
