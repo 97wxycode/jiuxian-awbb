@@ -1,13 +1,23 @@
 /* pages/detail/detail.wxss */
+
 .swiper-img{
   height:800rpx;
+  background: #fff;
 }
 .detail-page{
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-
+.swiper-item{
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+}
+.swiper-item image{
+  width: 100%;
+}
 .detail-container{
   overflow: scroll;
   background:#f3f4f5;
@@ -135,20 +145,19 @@
 }
 
 .product-discount{
-  margin-top: 30rpx;
+  margin-top: 20rpx;
   background:#fff;
   padding:0rpx 20rpx;
 }
 .tab-tr{
   display: flex;
   height: 76rpx;
-  width: 100%;
   line-height: 76rpx;
   font-size: 28rpx;
   
 }
 .tab-left{
-  width: 56rpx;
+  min-width: 56rpx;
   color:#747474;
   font-weight: 500rpx;
 }
@@ -226,15 +235,20 @@
 }
 .serve{
   border-top: 1px solid #ccc;
-  height: 82rpx;
   display: flex;
+  flex-wrap: wrap;
+  margin: 10rpx 0;
 }
+
 .serve-item{
+  margin: 10rpx 0 16rpx 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right:20rpx;
+  margin-right:16rpx;
+  white-space: nowrap;
 }
+
 .serve-item image{
   width: 36rpx;
   height: 36rpx;
@@ -243,24 +257,40 @@
 .product-shop{
   background:#fff;
   padding: 20rpx 20rpx;
-  height: 150rpx;
+  height: 110rpx;
   display: flex;
   position: relative;
   justify-items: center;
   align-items: center;
+  padding-left: 40rpx;
+ 
 }
 .product-shop image{
   width: 110rpx;
   height: 110rpx;
 }
+.shop-city{
+  color:#999;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+}
+.shop-culture{
+  margin:10rpx 0  0 40rpx;
+  width: 500rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 26rpx;
+}
 .shop-name-container{
   height: 110rpx;
   display: flex;
-  font-size: 32rpx;
+    font-size: 26rpx;
+  flex-direction: column;
  
 }
 .shop-name{
-  margin: 10rpx 0 0 20rpx;
+  margin: 10rpx 0 0 40rpx;
   height: 40rpx;
   display: flex;
   line-height: 40rpx;
@@ -273,4 +303,110 @@
 .product-shop .right-right{
   right: 30rpx;
   font-weight: normal;
+}
+.product-comment{
+  margin-top: 20rpx;
+  background:#fff;
+  padding: 20rpx 20rpx;
+}
+.comment-title{
+  display: flex;
+  justify-content: space-between;
+}
+.comment-title .tab-left{
+  display: flex;
+  width: max-content;
+  font-size: 28rpx;
+  white-space:nowrap;
+  color: #000;
+}
+.comment-count{
+  line-height: 38rpx;
+  font-size:24rpx; 
+}
+.comment-right{
+  display: flex;
+  align-content: center;
+  height: 42rpx;
+  line-height: 42rpx;
+}
+.comment-enter{
+  color: #999999;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+  margin-right: 8rpx;
+}
+.comment-class{
+  margin-top: 20rpx;
+}
+.comment-class-item{
+  display: inline-block;
+  padding: 0 50rpx;
+  height: 52rpx;
+  background: #fbeeee;
+  color: #000;
+  border-radius: 50rpx;
+  line-height: 52rpx;
+  text-align: center;
+  margin:0 20rpx 20rpx 0;
+}
+.active{
+  background: #e96560;
+  color: #fff;
+}
+.item-top{
+  display: flex;
+  justify-content: space-between;
+}
+.comment-name{
+  display: flex;
+  font-weight: 600;
+  font-size: 28rpx;
+  align-items: center;
+}
+.comment-item{
+  margin-top: 20rpx;
+  border-bottom: 1px solid #ccc;
+}
+.comment-item:last-child{
+  border-bottom:none;
+}
+.comment-name text{
+  margin: 0 16rpx;
+}
+.comment-content{
+  font-size: 28rpx;
+  margin: 20rpx 0 40rpx 0;
+}
+.jiushen{
+  font-size: 22rpx;
+  font-weight: normal;
+  width: 62rpx;
+  height: 30rpx;
+  background: #e96560;
+  color: white;
+  border-radius: 8rpx;
+  line-height: 30rpx;
+  text-align: center;
+}
+.comment-more{
+  margin: 40rpx auto 20rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  width: 230rpx;
+  height: 60rpx;
+  color: #e96560;
+  border: 1px solid #e96560;
+  border-radius: 6rpx;
+}
+.product-detail{
+  margin-top: 20rpx;
+  background:#fff;
+  padding: 20rpx 20rpx;
+}
+.product-detail-title{
+  border-left: 8rpx solid #e96560;
+  padding-left: 20rpx;
+  font-size: 28rpx;
 }

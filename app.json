@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/category/category",
     "pages/cart/cart",
-    "pages/myjx/myjx"
+    "pages/myjx/myjx",
+    "pages/detail/components/rating/rating"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -44,5 +45,4 @@
     ]
   },
   "sitemapLocation": "sitemap.json"
-  
 }

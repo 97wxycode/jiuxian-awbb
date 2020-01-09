@@ -2,11 +2,11 @@
 <view class="detail-page">
   <view class="detail-container">
     <!-- 轮播图 -->
-    <swiper indicator-dots="true" autoplay interval="{{interval}}" duration="{{duration}}" class="swiper-img">
-      <block wx:for="{{background}}" wx:key="*this">
+    <swiper indicator-dots="true" autoplay  interval="{{interval}}" duration="{{duration}}" class="swiper-img">
+      <block wx:for="{{detailData.imageList}}" wx:key="bigImage">
         <swiper-item>
-          <view class="swiper-item {{item}}">
-            <view>{{item}}</view>
+          <view class="swiper-item ">
+            <image src="{{item.bigImage}}"></image>
           </view>
         </swiper-item>
       </block>
@@ -15,16 +15,16 @@
     <view class="product-info">
       <view class="product-title">
         <view class="product-type">自营</view>
-        <view>52`C酒鬼湘泉老坛500ml</view>
+        <view>{{detailData.proName}}</view>
       </view>
       <view class="product-act">数量有限，先到先得</view>
       <view class="product-price">
-        <view class="now-price">￥39.00</view>
-        <view class="after-price">酒仙价:59.00</view>
+        <view class="now-price">￥{{detailData.mobileExclusivePrice}}</view>
+        <view class="after-price">酒仙价:￥{{detailData.proPrice}}</view>
       </view>
       <view class="member">
         <view class="club">CLUB</view>
-        <view class="club-act">会员下单再享98折，可省0.78元</view>
+        <view class="club-act">{{detailData.clubTip}}</view>
       </view>
       <view class="rush-time">
         <view class="rush-icon">限时抢购</view>
@@ -61,9 +61,9 @@
         <view class="tab-left">数量</view>
         <view class="tab-right">
           <view class="count-control">
-            <view>-</view>
-            <input class="count" type="number" value="1" />
-            <view>+</view>
+            <view bindtap="cut">-</view>
+            <input class="count" type="number" value="{{count}}"  />
+            <view bindtap="add">+</view>
           </view>
         </view>
       </view>
@@ -85,35 +85,98 @@
       </view>
 
       <view class="serve">
-        <view class="serve-item">
-          <image src="/resources/icons/product/tianmaomendianziti.png"></image>
-          店铺发货&售后
-        </view>
-        <view class="serve-item">
-          <image src="/resources/icons/product/tianmaoqitiantuihuo.png"></image>
-          7天退换
+        <view class="serve-item" wx:for="{{detailData.serviceDescriptionUrl}}" wx:key="{{advertisingId}}">
+          <image src="{{item.adImg}}"></image>
+          {{item.advertisingName}}
         </view>
       </view>
+
     </view>
     <!-- 店铺 -->
     <view class="product-shop">
-      <image src="/resources/icons/product/tianmaomendianziti.png"></image>
+      <image src="{{detailData.brandImage}}"></image>
       <view class="shop-name-container">
         <view class="shop-name">
-          <view>酒仙团官方旗舰店</view>
+          <view>{{detailData.brandName}}</view>
           <view class="cut">|</view>
+          <view class="shop-city">{{detailData.brandRegionName}}</view>
           <view class="product-type">店铺</view>
         </view>
+        <view class="shop-culture">{{detailData.brandCulture}}</view>
         <view class="right-right">></view>
       </view>
     </view>
+
+    <!-- 评价 -->
+    <view class="product-comment">
+      <view class="comment-title">
+        <view class="tab-left">
+          <view >商品评价</view>
+          <view class="comment-count">（{{detailData.commentCount}}人评价）</view>
+        </view>
+        <view class="comment-right">
+          <text>好评度<text class="red">100%</text></text>
+          <text class="comment-enter">></text>
+        </view>
+      </view>
+      <view class="comment-class">
+        <view class="comment-class-item active">全部</view>
+        <view class="comment-class-item">酒味纯正</view>
+        <view class="comment-class-item">物有所值</view>
+        <view class="comment-class-item">清澈透明</view>
+      </view>
+
+      <view class="comment-list">
+        <view class="comment-item">
+          <view class="item-top">
+            <rating rate="{{4}}"/>
+            <view class="comment-name">
+              <text>逍遥自在</text>
+              <view class="club">CLUB</view>
+            </view>
+          </view>
+          <view class="comment-content">这家伙很懒，没有写评论</view>
+        </view>
+        <view class="comment-item">
+          <view class="item-top">
+            <rating rate="{{5}}"/>
+            <view class="comment-name">
+              <text>逍遥自在</text>
+              <view class="jiushen">酒神</view>
+            </view>
+          </view>
+          <view class="comment-content">这家伙很懒，没有写评论</view>
+        </view>
+        <view class="comment-item">
+          <view class="item-top">
+            <rating rate="{{5}}"/>
+            <view class="comment-name">
+              <text>逍遥自在</text>
+              <view class="jiushen">酒神</view>
+            </view>
+          </view>
+          <view class="comment-content">这家伙很懒，没有写评论</view>
+        </view>
+      </view>
+
+      <view class="comment-more">查看更多评论</view>
+    </view>
+
+    <!-- 详情介绍 -->
+    <view class="product-detail">
+      <!-- <view class="product-detail-title">
+      商品特点
+      </view>
+      <image  src="/resources/icons/star/star.png"></image> -->
+    </view>
   </view>
+ 
   <view class="footer">
     <view class="cart">
-      <cover-image src="/resources/icons/05采购-线性.png" />
+      <cover-image src="/resources/imgs/cart.png" />
       <view>购物车</view>
     </view>
-    <view class="add-cart">加入购物车</view>
+    <view class="add-cart" bindtap="addCart">加入购物车</view>
     <view class="buy-now">立刻购买</view>
   </view>
 </view>
