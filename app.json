@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/search/search_content/search_content",
+    "pages/comment/comment/comment",
     "pages/index/index",
+    "pages/search/search_content/search_content",
     "pages/detail/detail",
     "pages/category/category",
     "pages/cart/cart",
