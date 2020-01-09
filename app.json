@@ -1,9 +1,11 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/detail/detail",
     "pages/category/category",
     "pages/cart/cart",
     "pages/myjx/myjx",
+    "pages/search/search_content/search_content",
     "pages/wineList/wineList",
     "pages/allList/allList"
   ],
