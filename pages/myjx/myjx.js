@@ -24,7 +24,7 @@ Page({
 
   toAllList(){
     wx.navigateTo({
-      url: '/pages/allList/allList?type=0',
+      url: '/pages/allList/allList?status=0',
     })
   }
 })

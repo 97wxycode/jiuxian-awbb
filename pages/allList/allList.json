@@ -1,7 +1,6 @@
 {
   "navigationBarTitleText": "商品订单",
   "usingComponents": {
-    "mp-tabbar": "/miniprogram_npm/weui-miniprogram/tabbar/tabbar",
-    "tabbar" : "/components/custom-tab-bar/index"
+    
   }
 }

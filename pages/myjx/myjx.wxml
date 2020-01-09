@@ -16,15 +16,15 @@
     <text class="bar-allList" bindtap="toAllList">查看全部订单 ></text>
   </view>
   <view class="bar-buttom">
-    <navigator class="bar-button" url="/pages/allList/allList?type=1">
+    <navigator class="bar-button" url="/pages/allList/allList?status=1">
       <cover-image class="bar-img" src="/resources/myjx/topbar1.png" />
       待付款
     </navigator>
-    <navigator class="bar-button" url="/pages/allList/allList?type=2">
+    <navigator class="bar-button" url="/pages/allList/allList?status=2">
       <cover-image class="bar-img" src="/resources/myjx/topbar2.png" />
       待发货
     </navigator>
-    <navigator class="bar-button" url="/pages/allList/allList?type=3">
+    <navigator class="bar-button" url="/pages/allList/allList?status=3">
       <cover-image class="bar-img" src="/resources/myjx/topbar3.png" />
       待收货
     </navigator>
