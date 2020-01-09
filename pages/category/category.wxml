@@ -12,8 +12,14 @@
 </view>
 <view class="cat-wrap">
   <view class="list">
-    <view  class="listItem thisItem" data-key="{{item}}" bindtap="handletap" wx:for="{{wineKind}}" wx:key="*this" wx:if="{{item===initial}}">{{item}}</view>
-    <view  class="listItem" data-key="{{item}}" bindtap="handletap" wx:for="{{wineKind}}" wx:key="*this"  wx:if="{{item!==initial}}">{{item}}</view>
+    <view  class="listItem" data-key="{{item}}" bindtap="handletap" wx:for="{{wineKind}}" wx:key="*this" >
+      <view class=" thisItem" wx:if="{{item==initial}}">
+        {{item}}
+      </view>
+      <view  wx:else="{{item!==initial}}">
+        {{item}}
+      </view>
+    </view>
   </view>
   <scroll-view scroll-y="true" class="kind">
     <view wx:for="{{list}}" wx:key="*this" class="brand">
@@ -24,9 +30,9 @@
       <view class="brandlist">
         <view wx:for="{{item.list}}" wx:key="*this" class="itemBox">
           <image wx:if="{{item.image}}" src="{{item.image}}"></image>
-          <view wx:if="{{item.isRed}}" class="red">{{item.name}}{{item.name===list[3].list[item.id-1].name? "元":""}}{{item.id===8? "以上":""}}</view>
+          <view wx:if="{{item.isRed}}" class="red">{{item.name}}{{item.name===list[list.length-1].list[item.id-1].name? "元":""}}{{item.id===8? "以上":""}}</view>
           <view wx:else="{{!item.isRed}}">
-          {{item.name}}{{item.name===list[3].list[item.id-1].name? "元":""}}{{item.id===8? "以上":""}}</view>
+          {{item.name}}{{item.name===list[list.length-1].list[item.id-1].name? "元":""}}{{item.id===8? "以上":""}}</view>
         </view>
       </view>
     </view>

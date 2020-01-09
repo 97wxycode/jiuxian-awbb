@@ -1,0 +1,32 @@
+<scroll-view scroll-y="true">
+  <view class="categoryWrap">
+    <view class="searchWrap">
+      <view class="searchContent">
+        <view class="search-icon">
+          <icon type="search" size="34rpx" />
+        </view>
+        <view class="content">
+          <text>搜索商品</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="titBox">
+    <view wx:for="{{choose}}" class="chooseItem" wx:key="*this">{{item}}</view>
+  </view>
+  <view class="wineList">
+    <view class="wineItem">
+      <view class="imgBox">
+        <image src="https://img07.jiuxian.com/2019/0918/1ffdfffd7dcd41e09f6c93e0b911570b4.jpg"></image>
+      </view>
+      <view class="tit">
+        <text class="proName">52度华疆老窖20年纯粮食白酒新疆是生产浓香型白酒500ml（4瓶装）</text>
+        <text class="shopName">华疆酒类精品店</text>
+        <text class="proPrice">￥1168.00</text>
+        <text class="commentPercent">100%好评</text>
+        <text class="commentCount">122人评论</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
