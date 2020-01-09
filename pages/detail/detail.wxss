@@ -9,7 +9,7 @@
 }
 
 .detail-container{
-    overflow: scroll;
+  overflow: scroll;
   background:#f3f4f5;
   flex: 1;
   height: 100%;
@@ -66,6 +66,7 @@
   align-items: center;
 }
 .product-type{
+  font-size: 26rpx;
   font-weight: normal;
   width: 62rpx;
   height: 30rpx;
@@ -144,12 +145,15 @@
   width: 100%;
   line-height: 76rpx;
   font-size: 28rpx;
+  
 }
 .tab-left{
+  width: 56rpx;
   color:#747474;
   font-weight: 500rpx;
 }
 .tab-right{
+  position: relative;
   width: 620rpx;
   display: flex;
   align-items: center;
@@ -159,6 +163,24 @@
 }
 .tab-right view{
   margin-left: 20rpx;
+}
+.right-right{
+    position: absolute;
+    right: 0;
+    color: #999999;
+}
+.row{
+  display:flex;
+}
+.row view{
+  margin-left: 0rpx;
+}
+.city-status{
+ margin-top: -26rpx;
+ font-size: 24rpx;
+}
+.city-status view{
+  color: #999;
 }
 .discount-icon{
   text-align: center;
@@ -201,4 +223,54 @@
     font-weight: 600rpx;
     width:38rpx;
     line-height: 52rpx;
+}
+.serve{
+  border-top: 1px solid #ccc;
+  height: 82rpx;
+  display: flex;
+}
+.serve-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right:20rpx;
+}
+.serve-item image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+.product-shop{
+  background:#fff;
+  padding: 20rpx 20rpx;
+  height: 150rpx;
+  display: flex;
+  position: relative;
+  justify-items: center;
+  align-items: center;
+}
+.product-shop image{
+  width: 110rpx;
+  height: 110rpx;
+}
+.shop-name-container{
+  height: 110rpx;
+  display: flex;
+  font-size: 32rpx;
+ 
+}
+.shop-name{
+  margin: 10rpx 0 0 20rpx;
+  height: 40rpx;
+  display: flex;
+  line-height: 40rpx;
+  align-items: center;
+  font-weight: 500;
+}
+.cut{
+  margin: -4rpx 20rpx 0 20rpx;
+}
+.product-shop .right-right{
+  right: 30rpx;
+  font-weight: normal;
 }

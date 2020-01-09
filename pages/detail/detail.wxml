@@ -47,7 +47,7 @@
         <view class="tab-left">赠品</view>
         <view class="tab-right">
           <view>沃德古堡单一麦芽精酿啤酒500ml*12</view>
-        <view class="right-right">x1</view>
+          <view class="right-right">x1</view>
         </view>
       </view>
       <view class="tab-tr">
@@ -69,9 +69,42 @@
       </view>
       <view class="tab-tr">
         <view class="tab-left">送至</view>
-        <view class="tab-right">
-          <view>北京，北京市，东城</view>
+        <view class="tab-right city-right">
+          <view class="row">
+            <view>北京，北京市，东城区</view>
+            <view class="right-right">></view>
+          </view>
         </view>
+      </view>
+
+      <view class="tab-tr city-status" >
+        <view class="tab-left">  </view>
+        <view class="tab-right">
+          <view>有货</view>
+        </view>
+      </view>
+
+      <view class="serve">
+        <view class="serve-item">
+          <image src="/resources/icons/product/tianmaomendianziti.png"></image>
+          店铺发货&售后
+        </view>
+        <view class="serve-item">
+          <image src="/resources/icons/product/tianmaoqitiantuihuo.png"></image>
+          7天退换
+        </view>
+      </view>
+    </view>
+    <!-- 店铺 -->
+    <view class="product-shop">
+      <image src="/resources/icons/product/tianmaomendianziti.png"></image>
+      <view class="shop-name-container">
+        <view class="shop-name">
+          <view>酒仙团官方旗舰店</view>
+          <view class="cut">|</view>
+          <view class="product-type">店铺</view>
+        </view>
+        <view class="right-right">></view>
       </view>
     </view>
   </view>
