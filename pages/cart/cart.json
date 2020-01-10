@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "goodsList": "/components/goodsList/goodsList"
+  },
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "购物车"
 }
