@@ -91,10 +91,13 @@ Page({
         newStore.push(store)
       }
     })
+    //判断是不是全选中了，修改最底部全选
+    let isAll = this._isAll(this.data.cart)
     let { currentCount, currentPrice } = this._payment(newStore)
     this.setData({
       cart: newStore,
       total: {
+        isTotal: isAll,
         count: currentCount,
         price: currentPrice
       }
