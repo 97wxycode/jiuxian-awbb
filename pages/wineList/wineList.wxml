@@ -15,10 +15,10 @@
   <view class="titBox">
     <view data-key="{{item}}" bindtap="handleTabTap" wx:for="{{choose}}" class="chooseItem " wx:key="*this">
       <view class=" addRed" wx:if="{{item==initial}}">
-        {{item}}
+        {{item}}<image src="{{imgUrl}}" wx:if="{{item=='价格'}}"></image>
       </view>
       <view wx:else="{{item!==initial}}">
-        {{item}}
+        {{item}}<image src="{{imgUrl}}" wx:if="{{item=='价格'}}"></image>
       </view>
     </view>
 

@@ -5,6 +5,7 @@ Component({
     list: [],
     initial:'综合排序',
     keyword:'茅台',
+    imgUrl:'/resources/imgs/desc.png',
     index:1,
     orderBy: '1:0',
     ascending :1
@@ -12,7 +13,7 @@ Component({
   
   lifetimes: {
 
-    created() {
+    ready() {
       this.setData({
         keyword: app.id
       })
@@ -51,7 +52,7 @@ Component({
         index:this.data.index+1
       })
       console.log(this.data.index)
-      this.requestData(this.data.keyword, this.data.index)
+      this.requestData(this.data.keyword, this.data.index, this.data.orderBy)
     },
     handleTabTap(e){
       let initial = e.currentTarget.dataset.key
@@ -62,8 +63,14 @@ Component({
         })
         if (this.data.ascending%2===0){
           initial = '升序'
+          this.setData({
+            imgUrl:'/resources/imgs/shenxu.png'
+          })
         }else{
           initial = '降序'
+          this.setData({
+            imgUrl:'/resources/imgs/jiangxu.png'
+          })
         }
       }
       console.log(initial)
