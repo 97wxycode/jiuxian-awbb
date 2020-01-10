@@ -75,6 +75,12 @@
   margin-left: 15rpx;
   margin-right: 15rpx;
 }
+.cat-wrap .kind .brand .brandtitle navigator{
+  color: #999;
+  line-height: 50rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
 .cat-wrap .kind .brand .brandlist{
   margin-top: 40rpx;
   display: flex;

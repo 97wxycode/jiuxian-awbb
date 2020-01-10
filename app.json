@@ -1,9 +1,13 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/detail/detail",
     "pages/category/category",
     "pages/cart/cart",
-    "pages/myjx/myjx"
+    "pages/myjx/myjx",
+    "pages/search/search_content/search_content",
+    "pages/wineList/wineList",
+    "pages/allList/allList"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -14,13 +18,13 @@
   "tabBar": {
     "color": "#686868",
     "selectedColor": "#dd4b44",
-    "borderStyle":"black",
+    "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath":"/resources/imgs/home.png",
-        "selectedIconPath":"/resources/imgs/home-on.png"
+        "iconPath": "/resources/imgs/home.png",
+        "selectedIconPath": "/resources/imgs/home-on.png"
       },
       {
         "pagePath": "pages/category/category",

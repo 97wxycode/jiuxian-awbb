@@ -1,3 +1,4 @@
+const app = getApp()
 Component({
   data: {
     list: [],
@@ -22,6 +23,14 @@ Component({
       this.requestData(id)
       this.setData({
         initial,
+      })
+    },
+    handleListTap(e){
+      let initial = e.currentTarget.dataset.key
+      console.log(initial)
+      app.setId(initial)
+      wx.navigateTo({
+        url: '/pages/wineList/wineList?keyword=' + initial,
       })
     },
     requestData(id){

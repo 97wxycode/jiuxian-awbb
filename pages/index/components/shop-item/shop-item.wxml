@@ -1,0 +1,40 @@
+<view class='shop-item' bindtap="goBuy" wx:if="{{isBorder}}">
+  <image src='/resources/imgs/shop.png'></image>
+  <view class='middle'>
+    <text class='tit'>50°洋河炫彩480ml*4</text>
+    <text class='desc'>津贴每满399减30</text>
+    <view class='price'>
+      <text class='curr_price'><text class="symbol">￥</text>89.00</text>
+      <text class='del_price'>￥129.00</text>
+    </view>
+    <view class='sales'>
+      <text class='sale'>已售30%</text>
+      <view class='process'>
+        <view class="process-inner"></view>
+      </view>
+    </view>
+  </view>
+  <view class='right'>
+      <view class='buy'>去抢购</view>
+  </view>
+</view>
+<view class='shop-item shop-item-border-none' bindtap="goBuy" wx:else >
+  <image src='/resources/imgs/shop.png'></image>
+  <view class='middle'>
+    <text class='tit'>50°洋河炫彩480ml*4</text>
+    <text class='desc'>津贴每满399减30</text>
+    <view class='price'>
+      <text class='curr_price'><text class="symbol">￥</text>89.00</text>
+      <text class='del_price'>￥129.00</text>
+    </view>
+    <view class='sales'>
+      <text class='sale'>已售30%</text>
+      <view class='process'>
+        <view class="process-inner"></view>
+      </view>
+    </view>
+  </view>
+  <view class='right'>
+      <view class='buy'>去抢购</view>
+  </view>
+</view>

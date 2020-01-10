@@ -23,7 +23,7 @@
   position: fixed;
   top: 0;
   z-index: 100;
-  background: #0f0;
+  background: #fff;
 }
 
 .search-icon {

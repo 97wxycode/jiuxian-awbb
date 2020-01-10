@@ -37,6 +37,16 @@
   font-size: 26rpx;
   color: #373737;
 }
+.titBox .chooseItem view{
+  position: relative;
+}
+.titBox .chooseItem image{
+  position: absolute;
+  left: 160rpx;
+  top: 30rpx;
+  height: 24rpx;
+  width: 12rpx;
+}
 
 .wineItem{
   padding-top: 20rpx;
@@ -50,4 +60,39 @@
 .wineItem .imgBox image{
   width: 240rpx;
   height: 240rpx;
+}
+
+.tit{
+  border-bottom: 1rpx solid #e8e8e8;
+  margin-left: 10rpx;
+}
+.tit .proName{
+  font-size: 28rpx;
+  line-height: 38rpx;
+  margin-right: 10rpx;
+  height: 76rpx;
+}
+.tit .shopName{
+  font-size: 24rpx;
+  color: #999;
+}
+.tit .proPrice{
+  color: red;
+  font-size: 28rpx;
+  line-height: 48rpx;
+}
+.tit .commentPercent{
+  font-size: 24rpx;
+  line-height: 48rpx;
+  color: #999;
+}
+.tit .commentPercent text{
+  font-size: 24rpx;
+  line-height: 28rpx;
+  background: red;
+  color: #fff;
+}
+
+.titBox .addRed{
+  color: red;
 }

@@ -13,19 +13,29 @@
   </view>
 
   <view class="titBox">
-    <view wx:for="{{choose}}" class="chooseItem" wx:key="*this">{{item}}</view>
+    <view data-key="{{item}}" bindtap="handleTabTap" wx:for="{{choose}}" class="chooseItem " wx:key="*this">
+      <view class=" addRed" wx:if="{{item==initial}}">
+        {{item}}<image src="{{imgUrl}}" wx:if="{{item=='价格'}}"></image>
+      </view>
+      <view wx:else="{{item!==initial}}">
+        {{item}}<image src="{{imgUrl}}" wx:if="{{item=='价格'}}"></image>
+      </view>
+    </view>
+
   </view>
   <view class="wineList">
-    <view class="wineItem">
+    <view class="wineItem" wx:for="{{list}}" wx:key="*this">
       <view class="imgBox">
-        <image src="https://img07.jiuxian.com/2019/0918/1ffdfffd7dcd41e09f6c93e0b911570b4.jpg"></image>
+        <image src="{{item.bigImage}}"></image>
       </view>
       <view class="tit">
-        <text class="proName">52度华疆老窖20年纯粮食白酒新疆是生产浓香型白酒500ml（4瓶装）</text>
-        <text class="shopName">华疆酒类精品店</text>
-        <text class="proPrice">￥1168.00</text>
-        <text class="commentPercent">100%好评</text>
-        <text class="commentCount">122人评论</text>
+        <view class="proName">{{item.proName}}</view>
+        <view wx:if="{{item.shopName}}" class="shopName">{{item.shopName}}</view>
+        <text wx:else="{{!item.shopName}}" class="shopName" decode="{{true}}">&ensp;</text>
+        <view class="proPrice">￥{{item.proPrice}}</view>
+        <view class="commentPercent">
+          <text wx:if="{{item.supportHY}}"> 自营 </text> {{item.commentPercent}}好评 {{item.evaluationNumber}}人评论
+        </view>
       </view>
     </view>
   </view>

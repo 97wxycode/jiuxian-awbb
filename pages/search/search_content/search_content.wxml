@@ -1,0 +1,27 @@
+<view class="search-Warp">
+  <my-searchbar focus="true" ext-class="MySearchbar" search="{{search}}" bindclear="handleClear" throttle="{{800}}" />
+  <view class="searchHistory" wx:if="{{keywords===''}}">
+    <view class="heard">
+      <text>历史搜索</text>
+    </view>
+    <view class="history-content">
+      <view class="history-item" wx:for="{{historyList}}" wx:key="id">
+        <text>{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="list-Wrap" wx:else>
+    <view class="list-content">
+      <view class="list-item" wx:for="{{list}}" wx:key="id" wx:if="{{list.lenght !== 0}}">
+        <view class="item-left ietmCon">
+          <text class="name_key">{{ item.name_key}}</text>
+          <text>{{item.name_content}}</text>
+        </view>
+        <view class="item-right ietmCon" wx:if="{{list.lenght !== 0}}">
+          <text>约{{item.count}}条</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

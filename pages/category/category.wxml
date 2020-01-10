@@ -1,14 +1,7 @@
 <view class="categoryWrap">
-    <view class="searchWrap">
-      <view class="searchContent">
-        <view class="search-icon">
-          <icon type="search" size="34rpx"/>
-        </view> 
-        <view class="content">
-          <text>搜索商品</text>
-        </view>
-      </view>
-    </view>
+  <search  
+    bindtap = "clickToSearch"
+  />
 </view>
 <view class="cat-wrap">
   <view class="list">
@@ -25,10 +18,10 @@
     <view wx:for="{{list}}" wx:key="*this" class="brand">
       <view  class="brandtitle">
         <text>{{item.name}}</text>
-        <text wx:if="{{item.isAll===1}}">全部商品 > </text>
+        <text data-key="{{initial}}" bindtap="handleListTap" wx:if="{{item.isAll===1}}" url="/pages/wineList/wineList" >全部商品 > </text>
       </view>
       <view class="brandlist">
-        <view wx:for="{{item.list}}" wx:key="*this" class="itemBox">
+        <view wx:for="{{item.list}}" wx:key="*this" class="itemBox" data-key="{{item.name}}" bindtap="handleListTap">
           <image wx:if="{{item.image}}" src="{{item.image}}"></image>
           <view wx:if="{{item.isRed}}" class="red">{{item.name}}{{item.name===list[list.length-1].list[item.id-1].name? "元":""}}{{item.id===8? "以上":""}}</view>
           <view wx:else="{{!item.isRed}}">
@@ -38,4 +31,3 @@
     </view>
   </scroll-view>
 </view>
-
