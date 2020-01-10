@@ -73,7 +73,7 @@ align-items: center;
   display: flex;
   font-size: 26rpx;
   font-weight: 600;
-  align-items: center;
+  align-items: flex-start;
 }
 .product-type{
   font-size: 26rpx;
@@ -90,6 +90,9 @@ align-items: center;
 .product-act{
   color: #e96560;
   font-size: 30rpx;
+}
+.product-name{
+  margin-top: -4rpx;
 }
 .product-price{
   margin-top: 20rpx;
@@ -169,6 +172,11 @@ align-items: center;
   padding-left: 20rpx;
   color:#333333;
   justify-items: flex-end;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 26rpx;
+
 }
 .tab-right view{
   margin-left: 20rpx;
@@ -195,11 +203,12 @@ align-items: center;
   text-align: center;
   line-height: 32rpx;
   font-size: 24rpx;
-  width: 110rpx;
   height: 32rpx;
   color: #e96560;
   border: 1px solid #e96560;
   border-radius: 6rpx;
+  padding: 0 18rpx;
+
 }
 .product-specs{
   background: #fff;
@@ -336,58 +345,16 @@ align-items: center;
   margin-left: 20rpx;
   margin-right: 8rpx;
 }
-.comment-class{
+
+.product-detail{
   margin-top: 20rpx;
+  background:#fff;
+  padding: 20rpx 20rpx;
 }
-.comment-class-item{
-  display: inline-block;
-  padding: 0 50rpx;
-  height: 52rpx;
-  background: #fbeeee;
-  color: #000;
-  border-radius: 50rpx;
-  line-height: 52rpx;
-  text-align: center;
-  margin:0 20rpx 20rpx 0;
-}
-.active{
-  background: #e96560;
-  color: #fff;
-}
-.item-top{
-  display: flex;
-  justify-content: space-between;
-}
-.comment-name{
-  display: flex;
-  font-weight: 600;
+.product-detail-title{
+  border-left: 8rpx solid #e96560;
+  padding-left: 20rpx;
   font-size: 28rpx;
-  align-items: center;
-}
-.comment-item{
-  margin-top: 20rpx;
-  border-bottom: 1px solid #ccc;
-}
-.comment-item:last-child{
-  border-bottom:none;
-}
-.comment-name text{
-  margin: 0 16rpx;
-}
-.comment-content{
-  font-size: 28rpx;
-  margin: 20rpx 0 40rpx 0;
-}
-.jiushen{
-  font-size: 22rpx;
-  font-weight: normal;
-  width: 62rpx;
-  height: 30rpx;
-  background: #e96560;
-  color: white;
-  border-radius: 8rpx;
-  line-height: 30rpx;
-  text-align: center;
 }
 .comment-more{
   margin: 40rpx auto 20rpx;
@@ -399,14 +366,4 @@ align-items: center;
   color: #e96560;
   border: 1px solid #e96560;
   border-radius: 6rpx;
-}
-.product-detail{
-  margin-top: 20rpx;
-  background:#fff;
-  padding: 20rpx 20rpx;
-}
-.product-detail-title{
-  border-left: 8rpx solid #e96560;
-  padding-left: 20rpx;
-  font-size: 28rpx;
 }

@@ -5,7 +5,9 @@
     "pages/category/category",
     "pages/cart/cart",
     "pages/myjx/myjx",
-    "pages/detail/components/rating/rating"
+    "pages/detail/components/rating/rating",
+    "pages/detail/components/comments/comments",
+    "pages/comments/comments"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,4 +1,5 @@
 // pages/detail/detail.js
+
 Page({
   data: {
     background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
@@ -6,7 +7,10 @@ Page({
     duration: 500,
     detailData: {},
     count: 1,
-    cart: []
+    cart: [],
+    shop:{},
+    price:'',
+    proId:''
   },
   onReady: function() {
     wx.getStorage({
@@ -20,7 +24,7 @@ Page({
     wx.request({
       url: 'https://newappproduct.jiuxian.com/product/proDetail.htm',
       data: {
-        appKey: ' c23e80a9-1004-4405-8bf6-deaea798d134',
+        appKey: 'c23e80a9-1004-4405-8bf6-deaea798d134',
         deviceType: 'XIAOCHENGXU',
         proId: '18426'
       },
@@ -32,7 +36,18 @@ Page({
         this.setData({
           detailData: res.data.result
         })
-        console.log(this.data.detailData)
+        //判断是否自营
+        let currentShop={
+          shopId: res.data.result.shopId || res.data.result.brandId,
+          shopIntro: res.data.result.shopIntro || res.data.result.brandCulture,
+          shopLogo: res.data.result.shopLogo || res.data.result.brandImage,
+          shopName: res.data.result.shopName || res.data.result.brandName,
+        }
+        this.setData({
+          shop: currentShop,
+          price: res.data.result.mobileExclusivePrice||res.data.result.proPrice,
+          proId: res.data.result.proId
+        })
       },
       fail: function(res) {},
       complete: function(res) {},
@@ -45,14 +60,15 @@ Page({
         count: this.data.count + 1
       })
   },
+
   cut: function() {
     if (this.data.count > 1)
       this.setData({
         count: this.data.count - 1
       })
   },
-  addCart: function() {
 
+  addCart: function() {
     let {
       proId,
       proName,
@@ -65,16 +81,17 @@ Page({
     let currentPro = {
       proId,
       proName,
-      proPrice,
+      proPrice:this.data.price,
       count: this.data.count,
       proImg: imageList[0].bigImage,
-      checked: true
+      checked: false,
+      isTouchMove:false
     }
 
     let currentShop = {
       brandId,
-      brandName,
-      checked: true,
+      brandName:this.data.shop.shopName,
+      checked: false,
       list: [
         currentPro
       ]
@@ -102,6 +119,12 @@ Page({
       success: (res) => {
         console.log(res.data, 1)
       }
+    })
+  },
+
+  goComment:function(){
+    wx.navigateTo({
+      url: `../comments/comments?proId=${this.data.proId}`
     })
   }
 })

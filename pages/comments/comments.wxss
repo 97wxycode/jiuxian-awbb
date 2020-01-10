@@ -1,0 +1,7 @@
+/* pages/comments/comments.wxss */
+.comment-container{
+  margin-top: 20rpx;
+  background: #fff;
+  padding: 20rpx 20rpx;
+  font-size: 24rpx;
+}
