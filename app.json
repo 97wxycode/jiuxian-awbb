@@ -1,13 +1,13 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/wineList/wineList",
     "pages/comment/comment/comment",
-    "pages/search/search_content/search_content",
     "pages/detail/detail",
     "pages/category/category",
     "pages/cart/cart",
     "pages/myjx/myjx",
-    "pages/wineList/wineList",
+    "pages/search/search_content/search_content",
     "pages/allList/allList"
   ],
   "window": {

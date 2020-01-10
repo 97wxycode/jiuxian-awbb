@@ -12,10 +12,10 @@
   display: flex;
 }
 .search-icon{
+  display: flex;
   width: 68rpx;
-  height: 100%;
-  text-align: center;
-  line-height: 68rpx;
+  align-items: center;
+  justify-content: center;
 }
 .content{
   flex: 1;
