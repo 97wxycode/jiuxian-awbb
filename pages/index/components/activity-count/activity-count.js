@@ -1,26 +1,20 @@
-// pages/index/components/activity-count/activity-count.js
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
-
+    status:Boolean
   },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
-
+    countStatus:false
   },
-
-  /**
-   * 组件的方法列表
-   */
+  observers: {
+    status(newVal) {
+      this.setData({
+        countStatus: newVal
+      });
+    }
+  },
   methods: {
     clickHandler(e){
-      const query = wx.createSelectorQuery().in(this)
-      console.log(query)
+      console.log(e.touches[0])
     }
   }
 })

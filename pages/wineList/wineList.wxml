@@ -1,0 +1,42 @@
+<scroll-view scroll-y="true">
+  <view class="categoryWrap">
+    <view class="searchWrap">
+      <view class="searchContent">
+        <view class="search-icon">
+          <icon type="search" size="34rpx" />
+        </view>
+        <view class="content">
+          <text>搜索商品</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="titBox">
+    <view data-key="{{item}}" bindtap="handleTabTap" wx:for="{{choose}}" class="chooseItem " wx:key="*this">
+      <view class=" addRed" wx:if="{{item==initial}}">
+        {{item}}
+      </view>
+      <view wx:else="{{item!==initial}}">
+        {{item}}
+      </view>
+    </view>
+
+  </view>
+  <view class="wineList">
+    <view class="wineItem" wx:for="{{list}}" wx:key="*this">
+      <view class="imgBox">
+        <image src="{{item.bigImage}}"></image>
+      </view>
+      <view class="tit">
+        <view class="proName">{{item.proName}}</view>
+        <view wx:if="{{item.shopName}}" class="shopName">{{item.shopName}}</view>
+        <text wx:else="{{!item.shopName}}" class="shopName" decode="{{true}}">&ensp;</text>
+        <view class="proPrice">￥{{item.proPrice}}</view>
+        <view class="commentPercent">
+          <text wx:if="{{item.supportHY}}"> 自营 </text> {{item.commentPercent}}好评 {{item.evaluationNumber}}人评论
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
