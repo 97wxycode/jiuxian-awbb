@@ -1,0 +1,50 @@
+/* pages/location/location.wxss */
+.locationWrap{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.locationContent{
+  flex: 1;
+}
+
+.default{
+  height: 90rpx;
+  display: flex;
+}
+.d-left{
+  width: 160rpx;
+  margin-left: 30rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #333333;
+  font-size: 28rpx;
+}
+.d-right{
+  flex: 1;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #333333;
+  font-size: 28rpx;
+}
+
+.locationBottom{
+  border-top:1px solid #d0d0d0;
+  height: 88rpx;
+  display: flex;
+}
+.b-item{
+  width: 50%;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+   font-size: 28rpx;
+}
+.b-item:first-child{
+  background-color: #fff;
+  color: #333;
+}
+.b-item:last-child{
+  background-color: #ea6560;
+  color: #fff;
+}
