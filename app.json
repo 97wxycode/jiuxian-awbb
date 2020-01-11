@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/myjx/myjx",
+    "pages/profile/profile",
     "pages/index/index",
     "pages/detail/detail",
     "pages/category/category",
