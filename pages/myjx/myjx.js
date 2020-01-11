@@ -93,8 +93,6 @@
 //   }
 // })
 
-
-
 Component({
   data:{
     showOneButtonDialog:false
