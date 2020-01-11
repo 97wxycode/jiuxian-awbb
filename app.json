@@ -1,13 +1,15 @@
 {
   "pages": [
-    "pages/detail/detail",
     "pages/index/index",
+    "pages/detail/detail",
     "pages/category/category",
     "pages/cart/cart",
     "pages/myjx/myjx",
-    "pages/detail/components/rating/rating",
-    "pages/detail/components/comments/comments",
-    "pages/comments/comments"
+    "pages/comments/comments",
+    "pages/search/search_content/search_content",
+    "pages/wineList/wineList",
+    "pages/allList/allList"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

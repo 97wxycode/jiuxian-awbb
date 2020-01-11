@@ -5,5 +5,5 @@
   <shop-item></shop-item>
   <shop-item></shop-item>
   <shop-item></shop-item>
-  <shop-item></shop-item>
+  <shop-item isborder="{{false}}"></shop-item>
 </view>

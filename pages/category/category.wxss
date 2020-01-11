@@ -3,6 +3,7 @@
 .searchWrap{
   width: 100%;
   display: flex;
+  border-bottom: 1rpx solid #f2f2f2;
 }
 .searchContent{
   width: 100%;
@@ -69,6 +70,12 @@
   justify-content: space-between;
 }
 .cat-wrap .kind .brand .brandtitle text{
+  color: #999;
+  line-height: 50rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+.cat-wrap .kind .brand .brandtitle navigator{
   color: #999;
   line-height: 50rpx;
   margin-left: 15rpx;

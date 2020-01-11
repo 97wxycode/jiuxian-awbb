@@ -1,36 +1,33 @@
-<!--pages/myjx/myjx.wxml-->
+
 <view class="top-mine">
   <view class="top-profile-wrapper">
     <view class="login-btn">
-      <view>登陆注册</view>
+      <view bindtap="login">登陆注册</view>
       <cover-image class="profile-arrow"    src="/resources/myjx/arrow.gif"></cover-image>
     </view>
     <view>
-      <cover-image class="profile"    src="/resources/myjx/profile.gif"></cover-image>
+      <cover-image class="profile"  src="/resources/myjx/profile.gif"></cover-image>
     </view>
    </view>
 </view>
 <view class="bar">
   <view class="bar-top">
     <text class="bar-myList">我的订单</text>
-    <text class="bar-allList">查看全部订单 ></text>
+    <text class="bar-allList" bindtap="toAllList">查看全部订单 ></text>
   </view>
   <view class="bar-buttom">
-    <view class="bar-button">
+    <navigator class="bar-button" url="/pages/allList/allList?status=1">
       <cover-image class="bar-img" src="/resources/myjx/topbar1.png" />
-    待付款
-      <text></text>
-    </view>
-    <view class="bar-button">
+      待付款
+    </navigator>
+    <navigator class="bar-button" url="/pages/allList/allList?status=2">
       <cover-image class="bar-img" src="/resources/myjx/topbar2.png" />
-    待发货
-      <text></text>
-    </view>
-    <view class="bar-button">
+      待发货
+    </navigator>
+    <navigator class="bar-button" url="/pages/allList/allList?status=3">
       <cover-image class="bar-img" src="/resources/myjx/topbar3.png" />
-    待收货
-      <text></text>
-    </view>
+      待收货
+    </navigator>
   </view>
   
 </view>

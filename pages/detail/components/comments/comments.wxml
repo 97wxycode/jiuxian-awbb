@@ -48,5 +48,5 @@
       </view>
     </view>
   </view>
-
+  <mp-loading wx:if="{{fromPage=='comment'}}" type="circle" show="{{loading}}"></mp-loading>
 </view>

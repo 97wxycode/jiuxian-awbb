@@ -14,7 +14,8 @@ Component({
   data: {
     labelList:[],
     commentList:[],
-    labelId: 999999999
+    labelId: 999999999,
+    loading:false
   },
 
   lifetimes: {
@@ -50,6 +51,9 @@ Component({
    */
   observers:{
     'pager':function(pager){
+      this.setData({
+        loading: true
+      })
       wx.request({
         url: 'https://newappuser.jiuxian.com/comment/getProductCommentDetail.htm',
         data: {
@@ -65,9 +69,9 @@ Component({
         success: (res) => {
           let list = [...this.data.commentList, ...res.data.result.commentList]
           this.setData({
-            commentList: list
+            commentList: list,
+            loading:false
           })
-console.log(list)
         }
       })
     }

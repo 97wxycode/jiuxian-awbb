@@ -6,3 +6,7 @@
 .index-container .main{
   height: 100%;
 }
+
+.swiper{
+  height: 360rpx;
+}

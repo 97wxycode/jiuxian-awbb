@@ -1,17 +1,27 @@
 Component({
   data: {
-    searchStatus:false
+    searchStatus: false,
+    countStatus: false
   },
-  methods:{
-    scroll(e){
+  methods: {
+    scroll(e) {
       let scrollTop = e.detail.scrollTop;
-      if(scrollTop>=20){
+      if (scrollTop >= 20) {
         this.setData({
-          searchStatus:true
+          searchStatus: true
         });
-      }else{
+      } else {
         this.setData({
           searchStatus: false
+        });
+      }
+      if (scrollTop >= 253) {
+        this.setData({
+          countStatus: true
+        });
+      } else {
+        this.setData({
+          countStatus: false
         });
       }
     }
