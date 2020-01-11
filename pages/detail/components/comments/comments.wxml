@@ -1,32 +1,52 @@
 <!--pages/detail/components/comments/comments.wxml-->
 <view class="comment-class">
-        <view 
-        wx:for="{{labelList}}" 
-        data-labelid="{{item.labelId}}" 
-        wx:key="labelId"
-        bindtap="onScreen"
-        class="comment-class-item {{labelId===item.labelId ? 'active' :''}}" 
-        
-        >
-          {{item.coment}}
-        </view>
-  
-      </view>
+  <view wx:for="{{labelList}}" data-labelid="{{item.labelId}}" wx:key="labelId" bindtap="onScreen" class="comment-class-item {{labelId===item.labelId ? 'active' :''}}">
+    {{item.coment}}
+  </view>
 
-      <view class="comment-list">
+</view>
 
-        <view class="comment-item" wx:for="{{commentList}}">
-          <view class="item-top">
-            <rating rate="{{item.firstComment.comentScore}}"/>
-            <view class="comment-name">
-              <text>{{item.userName}}</text>
-              <view class="club" wx:if="{{item.isClubUser}}">CLUB</view>
-              <view class="jiushen" wx:else>{{item.userRankName}}</view>
-            </view>
-          </view>
-          <view class="comment-content">{{item.firstComment.coment}}</view>
-        </view>
-    
-      
+<view class="comment-list">
+
+  <view wx:if="{{fromPage=='detail'}}" class="comment-item" wx:for="{{commentList}}" wx:key="createTime">
+    <view class="item-top">
+      <rating rate="{{item.firstComment.comentScore}}" />
+      <view class="comment-name">
+        <text>{{item.userName}}</text>
+        <image class="level" src="{{item.userLevelImg}}" />
       </view>
-      
+    </view>
+    <view class="comment-content">
+      <view class="text-comment">{{item.firstComment.coment}}</view>
+      <view class="img-comment" wx:if="{{item.firstComment.imgList}}">
+        <view class="img-item" wx:for="{{item.firstComment.imgList}}"  wx:key="comentId" style="background-image:url({{item.imgUrl}})" >
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view wx:if="{{fromPage=='comment'}}" class="comment-item" wx:for="{{commentList}}" wx:key="createTime">
+    <view class="item-top">
+      <view class="user">
+        <view class="user-img">
+          <image src="{{item.userImg}}"></image>
+        </view>
+        <view class="comment-name">
+          <text>{{item.userName}}</text>
+          <image class="level" src="{{item.userLevelImg}}" />
+        </view>
+      </view>
+      <text class="comment-time">{{item.createTimeDate}}</text>
+    </view>
+    <rating rate="{{item.firstComment.comentScore}}" />
+    <view class="comment-content">
+      <view class="text-comment">{{item.firstComment.coment}}</view>
+      <view class="img-comment" wx:if="{{item.firstComment.imgList}}">
+        <view class="img-item" wx:for="{{item.firstComment.imgList}}"  wx:key="comentId" style="background-image:url({{item.imgUrl}})">
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

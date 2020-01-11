@@ -123,7 +123,7 @@
       </view>
 
         <!-- comment -->
-        <comments wx:if="{{proId}}" proId="{{proId}}"></comments>
+        <comments wx:if="{{proId}}" proId="{{proId}}" fromPage="detail"></comments>
        <view class="comment-more" bindtap="goComment">查看更多评论</view>
     </view>
 

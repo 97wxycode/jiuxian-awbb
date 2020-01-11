@@ -3,7 +3,9 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    proId:Number
+    proId:Number,
+    fromPage:String,
+    pager:Number
   },
 
   /**
@@ -23,7 +25,7 @@ Component({
           appKey: 'c23e80a9-1004-4405-8bf6-deaea798d134',
           productId: this.properties.proId,
           labelId: '999999999',
-          pager: 3,
+          pager: 1,
           appVersion: '8.6.2'
         },
         method: "GET",
@@ -32,7 +34,7 @@ Component({
         success: (res)=> {
           this.setData({
             labelList:res.data.result.labelList,
-            commentList: res.data.result.commentList
+            commentList: this.properties.fromPage == "detail" ? res.data.result.commentList.slice(0, 3) : res.data.result.commentList
           })
           console.log(res.data.result)
         }
@@ -46,7 +48,30 @@ Component({
   /**
    * 组件的方法列表
    */
- 
+  observers:{
+    'pager':function(pager){
+      wx.request({
+        url: 'https://newappuser.jiuxian.com/comment/getProductCommentDetail.htm',
+        data: {
+          appKey: 'c23e80a9-1004-4405-8bf6-deaea798d134',
+          productId: this.properties.proId,
+          labelId: this.data.labelId,
+          pager: pager,
+          appVersion: '8.6.2'
+        },
+        method: "GET",
+        dataType: 'json',
+        responseType: 'text',
+        success: (res) => {
+          let list = [...this.data.commentList, ...res.data.result.commentList]
+          this.setData({
+            commentList: list
+          })
+console.log(list)
+        }
+      })
+    }
+  },
   methods: {
     onScreen:function(e){
      let labelId=e.currentTarget.dataset['labelid']
@@ -68,9 +93,9 @@ Component({
         responseType: 'text',
         success: (res) => {
           this.setData({
-            commentList: res.data.result.commentList
+            commentList: this.properties.fromPage == "detail" ? res.data.result.commentList.slice(0,3) : res.data.result.commentList
           })
-          console.log(res.data.result)
+          console.log(this.data.commentList)
         }
       })
 
