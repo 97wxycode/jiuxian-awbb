@@ -1,4 +1,8 @@
-{
-  "usingComponents": {}
-  
+{ 
+  "component": true,
+  "usingComponents": {
+    "rating":"./components/rating/rating",
+    "endTime":"./components/endTime/endTime",
+    "comments":"./components/comments/comments"
+  }
 }
