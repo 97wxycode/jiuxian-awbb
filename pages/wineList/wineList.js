@@ -4,26 +4,23 @@ Component({
     choose: ['综合排序', '销量', '价格'],
     list: [],
     initial:'综合排序',
-    keyword: '茅台',
+    keyword:'茅台',
+    imgUrl:'/resources/imgs/desc.png',
     index:1,
     orderBy: '1:0',
     ascending :1,
   },
   
   lifetimes: {
-    created() {
-      
-    },
-    ready(){
-      let keywords = app.id
+
+    ready() {
       this.setData({
-        keyword: keywords
+        keyword: app.id
       })
       var pages = getCurrentPages()    //获取加载的页面
       var currentPage = pages[pages.length - 1]    //获取当前页面的对象
       var options = currentPage
       this.requestData(this.data.keyword, this.data.index, this.data.orderBy)
-      console.log(this.data)
     }
   },
   methods: {
@@ -41,7 +38,6 @@ Component({
           this.setData({
             list: _data
           })
-          console.log(list)
          
         }
       })
@@ -50,8 +46,7 @@ Component({
       this.setData({
         index:this.data.index+1
       })
-      console.log(this.data.index)
-      this.requestData(this.data.keyword, this.data.index)
+      this.requestData(this.data.keyword, this.data.index, this.data.orderBy)
     },
     handleTabTap(e){
       let initial = e.currentTarget.dataset.key
@@ -62,11 +57,16 @@ Component({
         })
         if (this.data.ascending%2===0){
           initial = '升序'
+          this.setData({
+            imgUrl:'/resources/imgs/shenxu.png'
+          })
         }else{
           initial = '降序'
+          this.setData({
+            imgUrl:'/resources/imgs/jiangxu.png'
+          })
         }
       }
-      console.log(initial)
       let orderBy = ''
       switch(initial){
         case '综合排序': orderBy = '1:0';
@@ -78,7 +78,6 @@ Component({
         case '降序': orderBy = '5:1'; initial = '价格';
           break;
       }
-      console.log(orderBy)
       this.setData({
         initial,
       })
@@ -103,6 +102,12 @@ Component({
     clickToSearch() {
       wx.navigateTo({
         url: "/pages/search/search_content/search_content"
+      })
+    },
+    goDetail(e) {
+      let id = e.currentTarget.dataset.proid
+      wx.navigateTo({
+        url: `/pages/detail/detail?proid=${id}`,
       })
     }
   }

@@ -103,7 +103,6 @@ Component({
     getUserInfo(res){
       const userInfo = res.detail.userInfo;
       console.log(res.detail.userInfo)
-      console.log(0)
       wx.request({
         url: 'https://lisusususuli.top/users/authLogin',
         data:{

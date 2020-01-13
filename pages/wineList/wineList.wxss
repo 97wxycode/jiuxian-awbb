@@ -37,6 +37,16 @@
   font-size: 26rpx;
   color: #373737;
 }
+.titBox .chooseItem view{
+  position: relative;
+}
+.titBox .chooseItem image{
+  position: absolute;
+  left: 160rpx;
+  top: 30rpx;
+  height: 24rpx;
+  width: 12rpx;
+}
 
 .wineItem{
   padding-top: 20rpx;
