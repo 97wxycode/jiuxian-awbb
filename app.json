@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/myjx/myjx",
     "pages/profile/profile",
-    "pages/index/index",
     "pages/wineList/wineList",
     "pages/comment/comment/comment",
     "pages/detail/detail",
