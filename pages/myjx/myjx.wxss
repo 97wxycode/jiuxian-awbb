@@ -115,3 +115,11 @@ page{
   font-size: 24rpx;
 }
 
+.login-register-btn{
+  background:transparent;
+  border-width: 0;
+  border-color:transparent;
+  outline: none;
+  color: #fff;
+  font-size: 24rpx;
+}
