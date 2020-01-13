@@ -15,23 +15,21 @@ Page({
 
   touch: new touch(),
 
-  onLoad() { 
+  onShow() {
     let that = this;
-    wx.getStorage({
-      key: 'cart',
-      success: function(res) {
-        let { currentCount, currentPrice } = that._payment(res.data)
-        that.setData({
-          cart: res.data,
-          total: {
-            count: currentCount,
-            price: currentPrice
-          }
-        })
-      },
-    })
-  },
+    let res = wx.getStorageSync('cart')
 
+    if (res) {
+      let { currentCount, currentPrice } = that._payment(res)
+      that.setData({
+        cart: res,
+        total: {
+          count: currentCount,
+          price: currentPrice
+        }
+      })
+    }
+  },
   deleteGoods(e) {
     let currentIndex = e.currentTarget.dataset.index
     let brandId = e.currentTarget.dataset.brand
@@ -231,7 +229,8 @@ Page({
     let allCount = 0;
     let currentCount = 0;
     let allPrice = 0;
-    let currentPrice =0
+    let currentPrice =0;
+    // console.log(cart)
     cart.forEach((store) => {
       store.list.forEach((item,i)=>{
         allCount += item.count
