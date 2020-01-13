@@ -1,5 +1,5 @@
 <!--pages/comments/comments.wxml-->
 
-<view class="comment-container">
-  <comments wx:if="{{proId}}" proId="{{proId}}"></comments>
+<view class="comment-container" >
+  <comments wx:if="{{proId}}" proId="{{proId}}" fromPage="comment" pager="{{pager}}"></comments>
 </view>

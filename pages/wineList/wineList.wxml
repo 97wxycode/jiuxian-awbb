@@ -1,12 +1,15 @@
 <scroll-view scroll-y="true">
   <view class="categoryWrap">
-    <view class="searchWrap">
+    <view 
+      class="searchWrap" 
+      bindtap="clickToSearch"
+      >
       <view class="searchContent">
         <view class="search-icon">
-          <icon type="search" size="34rpx" />
+          <icon type="search" size="30rpx" />
         </view>
         <view class="content">
-          <text>搜索商品</text>
+          <text>{{keyword}}</text>
         </view>
       </view>
     </view>

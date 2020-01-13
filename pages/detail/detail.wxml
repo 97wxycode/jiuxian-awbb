@@ -111,7 +111,7 @@
 
     <!-- 评价 -->
     <view class="product-comment">
-      <view class="comment-title">
+      <view class="comment-title" bindtap="goComment">
         <view class="tab-left">
           <view bindtap="change">商品评价</view>
           <view class="comment-count">（{{detailData.commentCount}}人评价）</view>
@@ -123,7 +123,7 @@
       </view>
 
         <!-- comment -->
-        <comments wx:if="{{proId}}" proId="{{proId}}"></comments>
+        <comments wx:if="{{proId}}" proId="{{proId}}" fromPage="detail"></comments>
        <view class="comment-more" bindtap="goComment">查看更多评论</view>
     </view>
 
@@ -144,4 +144,7 @@
     <view class="add-cart" bindtap="addCart">加入购物车</view>
     <view class="buy-now">立刻购买</view>
   </view>
+  <mp-dialog title="提示" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+        <view>添加成功！</view>
+  </mp-dialog>
 </view>

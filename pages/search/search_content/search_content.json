@@ -1,8 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "my-searchbar":"../../../miniprogram_npm/weui-miniprogram/searchbar/searchbar",
-    "my-searchHistory":"../search_history/search_history",
-    "my-searchList": "../search_list/search_list"
+    "my-searchbar":"../../../miniprogram_npm/weui-miniprogram/searchbar/searchbar"
   }
 }

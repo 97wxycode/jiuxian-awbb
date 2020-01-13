@@ -1,0 +1,4 @@
+<view>
+  <image url="{{userInfo.avatarUrl}}"></image>
+  <text>{{userInfo.nickName}}</text>
+</view>
