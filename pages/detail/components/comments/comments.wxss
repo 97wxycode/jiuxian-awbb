@@ -1,0 +1,68 @@
+/* pages/detail/components/comments/comments.wxss */
+
+.comment-class{
+  margin-top: 20rpx;
+}
+.comment-class-item{
+  display: inline-block;
+  padding: 0 40rpx;
+  height: 52rpx;
+  background: #fbeeee;
+  color: #000;
+  border-radius: 50rpx;
+  line-height: 52rpx;
+  text-align: center;
+  margin:0 20rpx 20rpx 0;
+}
+.active{
+  background: #e96560;
+  color: #fff;
+}
+.item-top{
+  display: flex;
+  justify-content: space-between;
+}
+.comment-name{
+  display: flex;
+  font-weight: 600;
+  font-size: 28rpx;
+  align-items: center;
+}
+.comment-item{
+  margin-top: 20rpx;
+  border-bottom: 1px solid #ccc;
+}
+.comment-item:last-child{
+  border-bottom:none;
+}
+.comment-name text{
+  margin: 0 16rpx;
+}
+.comment-content{
+  font-size: 28rpx;
+  margin: 20rpx 0 40rpx 0;
+}
+.jiushen{
+  font-size: 22rpx;
+  font-weight: normal;
+  width: 62rpx;
+  height: 30rpx;
+  background: #e96560;
+  color: white;
+  border-radius: 8rpx;
+  line-height: 30rpx;
+  text-align: center;
+}
+
+.club {
+width: 58rpx;
+height: 22rpx;
+background: #ebd193;
+color: #000;
+border: 1rpx solid #000;
+border-radius: 6rpx;
+font-size: 18rpx;
+line-height: 22rpx;
+text-align: center;
+font-weight: 600;
+}

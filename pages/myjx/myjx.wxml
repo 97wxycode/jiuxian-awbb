@@ -2,7 +2,8 @@
 <view class="top-mine">
   <view class="top-profile-wrapper">
     <view class="login-btn">
-      <view bindtap="login">登陆注册</view>
+      <!-- <view bindtap="login">登录注册</view> -->\
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录注册</button>
       <cover-image class="profile-arrow"    src="/resources/myjx/arrow.gif"></cover-image>
     </view>
     <view>
