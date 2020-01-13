@@ -1,4 +1,4 @@
-Component({
+Page({
   options: {
     pureDataPattern: /^_/ // 指定所有 _ 开头的数据字段为纯数据字段
   },
@@ -27,11 +27,14 @@ Component({
     },
     goodsList:[],
   },
+
   switchTab(e) {
+    console.log(0)
     const data = e.currentTarget.dataset
     console.log(data.index)
     this._reqData(data.index)
   },
+
   _reqData(index){
     let key = this.data._mapStatus[index]
     let data = wx.getStorageSync(key)
@@ -42,10 +45,12 @@ Component({
   },
   attached() {
   },
-  created() {
-    console.log(page.path, 1)
-  },
+  // created() {
+  //   console.log(page.path, 1)
+  // },
   onLoad: function (options) {
+    console.log("onLoad")
+    console.log(options)
     // 页面创建时执行
     let index = options.status
     this._reqData(index)
