@@ -1,0 +1,82 @@
+<view class="locationWrap">
+  <view class="locationContent">
+    <view class="default">
+      <view class="d-left">
+        <text>地址</text>
+      </view>
+      <view class="d-right">
+        <text>{{province}} {{city}} {{district}}</text>
+      </view>
+    </view>
+    <view class="page">
+      <view class="page__bd">
+        <wux-cell-group>
+          <wux-picker 
+            options="{{ options1 }}" 
+            value="{{ value1[0] }}" 
+            cascade 
+            cols="1" 
+            data-index="1" 
+            bind:confirm="onConfirm" 
+            bind:valueChange="onValueChange"
+            disabled = "{{disable1}}"
+            >
+            <wux-cell 
+              title="省" 
+              is-link 
+              extra="{{ displayValue1 }}"
+              class="wuxCell"
+            ></wux-cell>
+          </wux-picker>
+          <wux-picker 
+            options="{{ options2 }}" 
+            value="{{ value2 }}" 
+            cascade 
+            cols="1" 
+            data-index="2" 
+            bind:confirm="onConfirm" 
+            bind:valueChange="onValueChange"
+            disabled = "{{disable2}}"
+            >
+            <wux-cell 
+              title="市" 
+              is-link 
+              extra="{{ displayValue2 }}"
+              class="wuxCell"
+              bindtap="handleCell"
+            ></wux-cell>
+          </wux-picker>
+          <wux-picker 
+            options="{{ options3 }}" 
+            value="{{ value3 }}" 
+            cascade 
+            cols="1" 
+            data-index="3" 
+            bind:confirm="onConfirm" 
+            bind:valueChange="onValueChange"
+            disabled="{{disable3}}"
+           
+            >
+            <wux-cell 
+              title="区/县" 
+              is-link 
+              extra="{{ displayValue3 }}"
+              class="wuxCell"
+              bindtap="handleCellQu"
+            ></wux-cell>
+          </wux-picker>
+        </wux-cell-group>
+      </view>
+    </view>
+  </view>
+  <view class="locationBottom">
+    <view 
+      class="b-item"
+      bindtap="onClickGoBack"
+    ><text>取消</text></view>
+    <view 
+      class="b-item"
+      bindtap="onClicktoValue"
+      ><text>确定</text></view>
+  </view>
+</view>

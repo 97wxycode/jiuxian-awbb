@@ -3,9 +3,12 @@
     <image src="/resources/imgs/navbar01.png"></image>
     <text>拼团</text>
   </view>
-  <view class="item">
+  <view 
+    class="item"
+    bindtap="clickToLocation"
+    >
     <image src="/resources/imgs/navbar01.png"></image>
-    <text>拼团</text>
+    <text>领劵</text>
   </view>
   <view class="item">
     <image src="/resources/imgs/navbar01.png"></image>
