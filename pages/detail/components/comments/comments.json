@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "rating": "../rating/rating"
+    "rating": "../rating/rating",
+    "mp-loading": "/miniprogram_npm/weui-miniprogram/loading/loading"
   }
 }

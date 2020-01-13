@@ -93,6 +93,8 @@
 //   }
 // })
 
+const app=getApp();
+
 Component({
   data:{
     showOneButtonDialog:false
@@ -107,7 +109,14 @@ Component({
           userInfo
         },
         success:(res)=>{
+          const userInfo = res.data.data.userInfo;
           console.log(res.data.data.userInfo);
+          wx.redirectTo({
+            url: '/pages/profile/profile',
+            success:()=>{
+              app.setUserInfo(userInfo);
+            }
+          });
         },
         fail:(err)=>{
           console.log(err);

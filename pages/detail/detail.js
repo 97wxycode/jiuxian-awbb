@@ -9,7 +9,9 @@ Page({
     cart: [],
     shop:{},
     price:'',
-    proId:''
+    proId:'',
+    showOneButtonDialog: false,
+    oneButton: [{ text: '确定' }],
   },
   onReady: function() {
     wx.getStorage({
@@ -113,6 +115,12 @@ Page({
       key: "cart",
       data: this.data.cart
     })
+
+    this.setData({
+      showOneButtonDialog: true
+    })
+
+
     wx.getStorage({
       key: 'cart',
       success: (res) => {
@@ -125,5 +133,11 @@ Page({
     wx.navigateTo({
       url: `../comments/comments?proId=${this.data.proId}`
     })
-  }
+  },
+  tapDialogButton(e) {
+    this.setData({
+      showOneButtonDialog: false
+    })
+  },
+
 })

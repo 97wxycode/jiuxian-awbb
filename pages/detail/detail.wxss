@@ -332,6 +332,7 @@ align-items: center;
 .comment-count{
   line-height: 38rpx;
   font-size:24rpx; 
+  margin-top: 3rpx;
 }
 .comment-right{
   display: flex;

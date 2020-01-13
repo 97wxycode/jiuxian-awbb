@@ -8,7 +8,7 @@ Component({
     imgUrl:'/resources/imgs/desc.png',
     index:1,
     orderBy: '1:0',
-    ascending :1
+    ascending :1,
   },
   
   lifetimes: {
@@ -17,15 +17,11 @@ Component({
       this.setData({
         keyword: app.id
       })
-      console.log(app.id)
       var pages = getCurrentPages()    //获取加载的页面
-
       var currentPage = pages[pages.length - 1]    //获取当前页面的对象
-
-      var options = currentPage       
+      var options = currentPage
       this.requestData(this.data.keyword, this.data.index, this.data.orderBy)
     }
-    
   },
   methods: {
     requestData(keyword, index, orderBy) {
@@ -42,7 +38,6 @@ Component({
           this.setData({
             list: _data
           })
-          console.log(list)
          
         }
       })
@@ -51,7 +46,6 @@ Component({
       this.setData({
         index:this.data.index+1
       })
-      console.log(this.data.index)
       this.requestData(this.data.keyword, this.data.index, this.data.orderBy)
     },
     handleTabTap(e){
@@ -73,7 +67,6 @@ Component({
           })
         }
       }
-      console.log(initial)
       let orderBy = ''
       switch(initial){
         case '综合排序': orderBy = '1:0';
@@ -85,7 +78,6 @@ Component({
         case '降序': orderBy = '5:1'; initial = '价格';
           break;
       }
-      console.log(orderBy)
       this.setData({
         initial,
       })
@@ -105,6 +97,17 @@ Component({
             list
           })
         }
+      })
+    },
+    clickToSearch() {
+      wx.navigateTo({
+        url: "/pages/search/search_content/search_content"
+      })
+    },
+    goDetail(e) {
+      let id = e.currentTarget.dataset.proid
+      wx.navigateTo({
+        url: `/pages/detail/detail?proid=${id}`,
       })
     }
   }

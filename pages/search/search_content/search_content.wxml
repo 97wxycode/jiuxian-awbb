@@ -5,7 +5,13 @@
       <text>历史搜索</text>
     </view>
     <view class="history-content">
-      <view class="history-item" wx:for="{{historyList}}" wx:key="id">
+      <view 
+          class="history-item" 
+          wx:for="{{searchRecord}}" 
+          wx:key="id"
+          data-hisval="{{item.value}}"
+          bindtap="handVal"
+        >
         <text>{{item.value}}</text>
       </view>
     </view>
@@ -13,7 +19,14 @@
 
   <view class="list-Wrap" wx:else>
     <view class="list-content">
-      <view class="list-item" wx:for="{{list}}" wx:key="id" wx:if="{{list.lenght !== 0}}">
+      <view 
+       class="list-item"
+       wx:for="{{list}}" 
+       wx:key="id" 
+       wx:if="{{list.lenght !== 0}}"
+       data-name="{{item.name}}"
+       bindtap="handListVal"
+       >
         <view class="item-left ietmCon">
           <text class="name_key">{{ item.name_key}}</text>
           <text>{{item.name_content}}</text>

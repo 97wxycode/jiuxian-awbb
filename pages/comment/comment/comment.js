@@ -1,22 +1,18 @@
-// pages/comments/comments.js
+// pages/comment/comment/comment.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    proId:0,
-    pager:1
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      proId: options.proId
-    })
-    console.log(options.proId)
+
   },
 
   /**
@@ -30,7 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log(this.data.proId)
+
   },
 
   /**
@@ -58,15 +54,13 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this.setData({
-      pager: this.data.pager + 1
-    })
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-   
+
   }
 })

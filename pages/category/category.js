@@ -49,6 +49,11 @@ Component({
           })
         }
       })
+    },
+    clickToSearch(){
+      wx.navigateTo({
+        url: "/pages/search/search_content/search_content"
+      })
     }
   }
 })
