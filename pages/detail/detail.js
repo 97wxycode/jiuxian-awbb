@@ -146,7 +146,7 @@ Page({
     })
   },
   goCart:function(){
-    console.log(222211111111222)
+    console.log(123456)
     wx.switchTab({
       url: '/pages/cart/cart',
     })

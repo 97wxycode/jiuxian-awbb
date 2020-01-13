@@ -100,6 +100,7 @@ Component({
         }
       })
     },
+    
     goDetail(e){
       let id=e.currentTarget.dataset.proid
       wx.navigateTo({
