@@ -24,6 +24,9 @@ Component({
           countStatus: false
         });
       }
+    },
+    onPullDownRefresh(){
+      console.log('下拉刷新')
     }
   }
 })

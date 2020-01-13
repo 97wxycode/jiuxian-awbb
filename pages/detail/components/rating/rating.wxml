@@ -1,0 +1,7 @@
+<!--pages/detail/components/rating/rating.wxml-->
+<view class='itembox'>
+  <view wx:for="{{imgs}}" wx:key="*this" data-index="{{item.id}}">
+    <image class="star" src="{{item.id>rate?src2:src1}}"></image>
+  </view>
+</view>
+

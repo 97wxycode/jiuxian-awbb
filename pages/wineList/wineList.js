@@ -42,6 +42,8 @@ Component({
           this.setData({
             list: _data
           })
+          console.log(list)
+         
         }
       })
     },

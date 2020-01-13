@@ -84,7 +84,7 @@
 .goods-name{
   font-size: 26rpx;
   width: 390rpx;
-  height: 70rpx;
+  height: 80rpx;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;

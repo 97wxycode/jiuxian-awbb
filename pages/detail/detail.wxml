@@ -2,11 +2,11 @@
 <view class="detail-page">
   <view class="detail-container">
     <!-- 轮播图 -->
-    <swiper indicator-dots="true" autoplay interval="{{interval}}" duration="{{duration}}" class="swiper-img">
-      <block wx:for="{{background}}" wx:key="*this">
+    <swiper indicator-dots="true" autoplay  interval="{{interval}}" duration="{{duration}}" class="swiper-img">
+      <block wx:for="{{detailData.imageList}}" wx:key="bigImage">
         <swiper-item>
-          <view class="swiper-item {{item}}">
-            <view>{{item}}</view>
+          <view class="swiper-item ">
+            <image src="{{item.bigImage}}"></image>
           </view>
         </swiper-item>
       </block>
@@ -15,72 +15,133 @@
     <view class="product-info">
       <view class="product-title">
         <view class="product-type">自营</view>
-        <view>52`C酒鬼湘泉老坛500ml</view>
+        <view class="product-name">{{detailData.proName}}</view>
       </view>
-      <view class="product-act">数量有限，先到先得</view>
+      <view class="product-act" wx:if="{{detailData.subTitle}}">{{detailData.subTitle}}</view>
       <view class="product-price">
-        <view class="now-price">￥39.00</view>
-        <view class="after-price">酒仙价:59.00</view>
+        <view class="now-price" >￥{{price}}</view>
+        <view class="after-price" wx:if="{{detailData.mobileExclusivePrice}}">酒仙价:￥{{detailData.proPrice}}</view>
       </view>
-      <view class="member">
+      <view class="member" wx:if="{{detailData.clubProduct}}">
         <view class="club">CLUB</view>
-        <view class="club-act">会员下单再享98折，可省0.78元</view>
+        <view class="club-act">{{detailData.clubTip}}</view>
       </view>
       <view class="rush-time">
-        <view class="rush-icon">限时抢购</view>
-        <view>剩余10时24分22秒</view>
+        <view class="rush-icon">{{detailData.promotionTitle.promotionTypeName}}</view>
+        <view>
+        <endTime end="{{detailData.allowanceList[0].endTime}}" wx:if="{{detailData.allowanceList[0].endTime}}"></endTime>
+        </view>
       </view>
     </view>
     <!-- 商品优惠 -->
-    <view class="product-discount tab-tr">
+    <view class="product-discount tab-tr" wx:if="{{detailData.largesses[0]}}">
       <view class="tab-left">优惠</view>
       <view class="tab-right">
         <view class="discount-icon">
-          买一赠一
+          {{detailData.promotions[0].promotionTypeName}}
         </view>
-        <view>沃德古堡买一送一</view>
+        <view>{{detailData.largesses[0].promotionDesc}}</view>
       </view>
     </view>
     <!-- 商品规格 -->
     <view class="product-specs">
-      <view class="tab-tr">
+      <view class="tab-tr" wx:if="{{detailData.largesses[0]}}">
         <view class="tab-left">赠品</view>
         <view class="tab-right">
-          <view>沃德古堡单一麦芽精酿啤酒500ml*12</view>
-        <view class="right-right">x1</view>
+          <view>{{detailData.largesses[0].productName}}</view>
+          <view class="right-right">x{{detailData.largesses[0].number}}</view>
         </view>
       </view>
       <view class="tab-tr">
         <view class="tab-left">金币</view>
         <view class="tab-right">
           <view class="money">赠送
-            <view class="red">49</view>金币</view>
+            <view class="red">{{detailData.giftGoldCoinNumber}}</view>金币</view>
         </view>
       </view>
       <view class="tab-tr">
         <view class="tab-left">数量</view>
         <view class="tab-right">
           <view class="count-control">
-            <view>-</view>
-            <input class="count" type="number" value="1" />
-            <view>+</view>
+            <view bindtap="cut">-</view>
+            <input class="count" type="number" value="{{count}}"  />
+            <view bindtap="add">+</view>
           </view>
         </view>
       </view>
       <view class="tab-tr">
         <view class="tab-left">送至</view>
-        <view class="tab-right">
-          <view>北京，北京市，东城</view>
+        <view class="tab-right city-right">
+          <view class="row">
+            <view>北京，北京市，东城区</view>
+            <view class="right-right">></view>
+          </view>
         </view>
       </view>
+
+      <view class="tab-tr city-status" >
+        <view class="tab-left">  </view>
+        <view class="tab-right">
+          <view>有货</view>
+        </view>
+      </view>
+
+      <view class="serve">
+        <view class="serve-item" wx:for="{{detailData.serviceDescriptionUrl}}" wx:key="advertisingId">
+          <image src="{{item.adImg}}"></image>
+          {{item.advertisingName}}
+        </view>
+      </view>
+
+    </view>
+    <!-- 店铺 -->
+    <view class="product-shop">
+      <image src="{{shop.shopLogo}}"></image>
+      <view class="shop-name-container">
+        <view class="shop-name">
+          <view>{{shop.shopName}}</view>
+          <view class="cut">|</view>
+          <view class="shop-city">{{detailData.brandRegionName}}</view>
+          <view class="product-type">{{detailData.sellerId?"店铺":"自营"}}</view>
+        </view>
+        <view class="shop-culture">{{shop.shopIntro}}</view>
+        <view class="right-right">></view>
+      </view>
+    </view>
+
+    <!-- 评价 -->
+    <view class="product-comment">
+      <view class="comment-title">
+        <view class="tab-left">
+          <view bindtap="change">商品评价</view>
+          <view class="comment-count">（{{detailData.commentCount}}人评价）</view>
+        </view>
+        <view class="comment-right">
+          <text>好评度<text class="red" >100%</text></text>
+          <text class="comment-enter">></text>
+        </view>
+      </view>
+
+        <!-- comment -->
+        <comments wx:if="{{proId}}" proId="{{proId}}"></comments>
+       <view class="comment-more" bindtap="goComment">查看更多评论</view>
+    </view>
+
+    <!-- 详情介绍 -->
+    <view class="product-detail">
+      <!-- <view class="product-detail-title">
+      商品特点
+      </view>
+      <image  src="/resources/icons/star/star.png"></image> -->
     </view>
   </view>
+ 
   <view class="footer">
     <view class="cart">
-      <cover-image src="/resources/icons/05采购-线性.png" />
+      <cover-image src="/resources/imgs/cart.png" />
       <view>购物车</view>
     </view>
-    <view class="add-cart">加入购物车</view>
+    <view class="add-cart" bindtap="addCart">加入购物车</view>
     <view class="buy-now">立刻购买</view>
   </view>
 </view>

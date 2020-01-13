@@ -1,15 +1,25 @@
 /* pages/detail/detail.wxss */
+
 .swiper-img{
   height:800rpx;
+  background: #fff;
 }
 .detail-page{
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-
+.swiper-item{
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+}
+.swiper-item image{
+  width: 100%;
+}
 .detail-container{
-    overflow: scroll;
+  overflow: scroll;
   background:#f3f4f5;
   flex: 1;
   height: 100%;
@@ -63,9 +73,10 @@
   display: flex;
   font-size: 26rpx;
   font-weight: 600;
-  align-items: center;
+  align-items: flex-start;
 }
 .product-type{
+  font-size: 26rpx;
   font-weight: normal;
   width: 62rpx;
   height: 30rpx;
@@ -79,6 +90,9 @@
 .product-act{
   color: #e96560;
   font-size: 30rpx;
+}
+.product-name{
+  margin-top: -4rpx;
 }
 .product-price{
   margin-top: 20rpx;
@@ -134,41 +148,67 @@
 }
 
 .product-discount{
-  margin-top: 30rpx;
+  margin-top: 20rpx;
   background:#fff;
   padding:0rpx 20rpx;
 }
 .tab-tr{
   display: flex;
   height: 76rpx;
-  width: 100%;
   line-height: 76rpx;
   font-size: 28rpx;
+  
 }
 .tab-left{
+  min-width: 56rpx;
   color:#747474;
   font-weight: 500rpx;
 }
 .tab-right{
+  position: relative;
   width: 620rpx;
   display: flex;
   align-items: center;
   padding-left: 20rpx;
   color:#333333;
   justify-items: flex-end;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 26rpx;
+
 }
 .tab-right view{
   margin-left: 20rpx;
+}
+.right-right{
+    position: absolute;
+    right: 0;
+    color: #999999;
+}
+.row{
+  display:flex;
+}
+.row view{
+  margin-left: 0rpx;
+}
+.city-status{
+ margin-top: -26rpx;
+ font-size: 24rpx;
+}
+.city-status view{
+  color: #999;
 }
 .discount-icon{
   text-align: center;
   line-height: 32rpx;
   font-size: 24rpx;
-  width: 110rpx;
   height: 32rpx;
   color: #e96560;
   border: 1px solid #e96560;
   border-radius: 6rpx;
+  padding: 0 18rpx;
+
 }
 .product-specs{
   background: #fff;
@@ -201,4 +241,129 @@
     font-weight: 600rpx;
     width:38rpx;
     line-height: 52rpx;
+}
+.serve{
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10rpx 0;
+}
+
+.serve-item{
+  margin: 10rpx 0 16rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right:16rpx;
+  white-space: nowrap;
+}
+
+.serve-item image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+.product-shop{
+  background:#fff;
+  padding: 20rpx 20rpx;
+  height: 110rpx;
+  display: flex;
+  position: relative;
+  justify-items: center;
+  align-items: center;
+  padding-left: 40rpx;
+ 
+}
+.product-shop image{
+  width: 110rpx;
+  height: 110rpx;
+}
+.shop-city{
+  color:#999;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+}
+.shop-culture{
+  margin:10rpx 0  0 40rpx;
+  width: 500rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 26rpx;
+}
+.shop-name-container{
+  height: 110rpx;
+  display: flex;
+    font-size: 26rpx;
+  flex-direction: column;
+ 
+}
+.shop-name{
+  margin: 10rpx 0 0 40rpx;
+  height: 40rpx;
+  display: flex;
+  line-height: 40rpx;
+  align-items: center;
+  font-weight: 500;
+}
+.cut{
+  margin: -4rpx 20rpx 0 20rpx;
+}
+.product-shop .right-right{
+  right: 30rpx;
+  font-weight: normal;
+}
+.product-comment{
+  margin-top: 20rpx;
+  background:#fff;
+  padding: 20rpx 20rpx;
+}
+.comment-title{
+  display: flex;
+  justify-content: space-between;
+}
+.comment-title .tab-left{
+  display: flex;
+  width: max-content;
+  font-size: 28rpx;
+  white-space:nowrap;
+  color: #000;
+}
+.comment-count{
+  line-height: 38rpx;
+  font-size:24rpx; 
+}
+.comment-right{
+  display: flex;
+  align-content: center;
+  height: 42rpx;
+  line-height: 42rpx;
+}
+.comment-enter{
+  color: #999999;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+  margin-right: 8rpx;
+}
+
+.product-detail{
+  margin-top: 20rpx;
+  background:#fff;
+  padding: 20rpx 20rpx;
+}
+.product-detail-title{
+  border-left: 8rpx solid #e96560;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+}
+.comment-more{
+  margin: 40rpx auto 20rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  width: 230rpx;
+  height: 60rpx;
+  color: #e96560;
+  border: 1px solid #e96560;
+  border-radius: 6rpx;
 }

@@ -1,0 +1,32 @@
+<!--pages/detail/components/comments/comments.wxml-->
+<view class="comment-class">
+        <view 
+        wx:for="{{labelList}}" 
+        data-labelid="{{item.labelId}}" 
+        wx:key="labelId"
+        bindtap="onScreen"
+        class="comment-class-item {{labelId===item.labelId ? 'active' :''}}" 
+        
+        >
+          {{item.coment}}
+        </view>
+  
+      </view>
+
+      <view class="comment-list">
+
+        <view class="comment-item" wx:for="{{commentList}}">
+          <view class="item-top">
+            <rating rate="{{item.firstComment.comentScore}}"/>
+            <view class="comment-name">
+              <text>{{item.userName}}</text>
+              <view class="club" wx:if="{{item.isClubUser}}">CLUB</view>
+              <view class="jiushen" wx:else>{{item.userRankName}}</view>
+            </view>
+          </view>
+          <view class="comment-content">{{item.firstComment.coment}}</view>
+        </view>
+    
+      
+      </view>
+      

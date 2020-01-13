@@ -1,0 +1,21 @@
+<view wx:for="{{list}}" wx:for-item="item" wx:key="proId" class="touch-wrapper">
+  <view class="touch-item {{item.isTouchMove?'touch-move-active':''}}" data-index="{{index}}" data-brand='{{store.brandId}}' bindtouchstart="touchstart" bindtouchmove="touchmove">
+    <view class="goods-content">
+      <checkbox value="{{item.proId}}" checked="{{store.checked}}" />
+      <cover-image class="goods-img" src="{{item.proImg}}"></cover-image>
+      <view class="goods-info">
+        <view class="goods-name">{{item.proName}}</view>
+        <view class="goods-beats">掌上秒拍</view>
+        <view class="goods-price">￥{{item.proPrice}}</view>
+        <view class="counter">
+          <view class="btn-sub" data-brand="{{brandId}}" data-index="{{index}}" bindtap="goodsSub">-</view>
+          <view class="btn-count">{{item.count}}</view>
+          <view class="btn-add" data-brand="{{brandId}}" data-index="{{index}}" bindtap="goodsAdd">+</view>
+        </view>
+      </view>
+    </view>
+    <view class="goods-del" bindtap="deleteGoods" data-brand="{{brandId}}" data-index="{{index}}">删除
+    </view>
+  </view>
+  <view class="border-b"></view>
+</view>

@@ -1,0 +1,12 @@
+
+.itembox {
+  display: flex;
+  align-items: center;
+}
+ 
+.star {
+  width: 26rpx;
+  height:26rpx;
+  margin: 0 5rpx;
+  vertical-align: middle;
+}

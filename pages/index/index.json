@@ -6,5 +6,6 @@
     "navbar":"./components/navbar/navbar",
     "activity-count":"./components/activity-count/activity-count",
     "shop-list":"./components/shop-list/shop-list"
-  }
+  },
+  "enablePullDownRefresh": true
 }
