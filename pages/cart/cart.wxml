@@ -1,2 +1,72 @@
 <!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<view class="cart-tips">
+  <cover-image class="img-tips" src="/resources/myjx/cart-tips.gif"></cover-image>
+  <text>自营商品实付满100元免运费，偏远地区满500元免运费</text>
+  <cover-image class="btn-del" src="/resources/myjx/cart-del.gif"></cover-image>
+</view>
+
+
+
+
+
+
+<!-- 购物车 -->
+<checkbox-group>
+  <view wx:for="{{cart}}" wx:for-item="store" wx:key="brandId" class="goods-store ">
+    <view class="goods-top">
+      <view class="goods-top-left">
+        <checkbox data-index="{{index}}"  checked="{{store.checked}}" bindtap="checkedAll"/>
+        <cover-image src="/resources/myjx/logo-small.gif"></cover-image>
+        <text>{{store.brandName}}</text>
+      </view>
+    </view>
+      <view wx:for="{{store.list}}" wx:for-item="item" wx:key="proId" class="touch-wrapper">
+        <view class="touch-item {{item.isTouchMove?'touch-move-active':''}}" data-index="{{index}}" data-brand='{{store.brandId}}' bindtouchstart="touchstart" bindtouchmove="touchmove">
+          <view class="goods-content">
+            <checkbox  data-index="{{index}}"  data-brandId="{{store.brandId}}" bindtap="checkedOne" checked="{{item.checked}}" />
+            <cover-image class="goods-img" src="{{item.proImg}}"></cover-image>
+            <view class="goods-info">
+              <view class="goods-name">{{item.proName}}</view>
+              <view class="goods-beats">掌上秒拍</view>
+              <view class="goods-price">￥{{item.proPrice}}</view>
+              <view class="counter">
+                <view class="btn-sub" data-brand="{{store.brandId}}" data-index="{{index}}" bindtap="goodsSub">-</view>
+                <view class="btn-count">{{item.count}}</view>
+                <view class="btn-add" data-brand="{{store.brandId}}" data-index="{{index}}" bindtap="goodsAdd">+</view>
+              </view>
+            </view>
+          </view>
+          <view class="goods-del" bindtap="deleteGoods" data-brand="{{store.brandId}}" data-index="{{index}}">删除
+          </view>
+        </view>
+        <view class="border-b"></view>
+      </view>
+  </view>
+</checkbox-group>
+
+
+
+
+
+
+
+
+
+
+<!-- 结账 -->
+<view class="block-100" style="width:100%;height:100rpx">
+</view>
+<view class="footer-wrapper cart-footer">
+  <checkbox value="" checked="{{total.isTotal}}" bindtap="allgoodsCheck" />
+  <view class="totalAmount">
+    <view class="amount">
+      合计:
+      <text class="amount-text">￥{{total.price}}</text>
+    </view>
+    <view class="amount-price">
+      总额:
+      <text class="amount-price-text">￥{{total.price}}</text>
+    </view>
+  </view>
+  <view class="btn-balance">去结算 ({{total.count}})</view>
+</view>

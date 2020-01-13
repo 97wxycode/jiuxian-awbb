@@ -99,6 +99,13 @@ Component({
           })
         }
       })
+    },
+    goDetail(e){
+      let id=e.currentTarget.dataset.proid
+      wx.navigateTo({
+        url:`/pages/detail/detail?proid=${id}`,
+      })
     }
+
   }
 })

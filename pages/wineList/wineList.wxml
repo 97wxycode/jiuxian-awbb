@@ -24,7 +24,7 @@
 
   </view>
   <view class="wineList">
-    <view class="wineItem" wx:for="{{list}}" wx:key="*this">
+    <view class="wineItem" wx:for="{{list}}" wx:key="*this" bindtap="goDetail" data-proId="{{item.proId}}">
       <view class="imgBox">
         <image src="{{item.bigImage}}"></image>
       </view>

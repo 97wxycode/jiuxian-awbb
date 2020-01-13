@@ -14,6 +14,11 @@ Page({
     showOneButtonDialog: false,
     oneButton: [{ text: '确定' }],
   },
+  onLoad:function(opt){
+    this.setData({
+      proId: opt.proid
+    })
+  },
   onReady: function() {
     wx.getStorage({
       key: 'cart',
@@ -28,7 +33,7 @@ Page({
       data: {
         appKey: 'c23e80a9-1004-4405-8bf6-deaea798d134',
         deviceType: 'XIAOCHENGXU',
-        proId: '18426'
+        proId: this.data.proId
       },
       header: {},
       method: 'GET',
@@ -89,7 +94,7 @@ Page({
       checked: false,
       isTouchMove:false
     }
-
+ 
     let currentShop = {
       brandId,
       brandName:this.data.shop.shopName,
@@ -102,11 +107,11 @@ Page({
     let isShop = this.data.cart.find(obj => {
       return obj.brandId == currentShop.brandId
     })
+    console.log(isShop)
     if (isShop) {
       let isPro = isShop.list.find(obj => {
         return obj.proId == currentPro.proId
       })
-      console.log(currentPro.count, isPro.count)
       isPro ? isPro.count += currentPro.count : isShop.list.push(currentPro)
     } else {
       this.data.cart.push(currentShop)
@@ -140,5 +145,10 @@ Page({
       showOneButtonDialog: false
     })
   },
-
+  goCart:function(){
+    console.log(222211111111222)
+    wx.switchTab({
+      url: '/pages/cart/cart',
+    })
+  }
 })
