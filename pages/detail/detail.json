@@ -3,6 +3,7 @@
   "usingComponents": {
     "rating":"./components/rating/rating",
     "endTime":"./components/endTime/endTime",
-    "comments":"./components/comments/comments"
+    "comments":"./components/comments/comments",
+    "mp-dialog": "/miniprogram_npm/weui-miniprogram/dialog/dialog"
   }
 }

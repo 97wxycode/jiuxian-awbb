@@ -9,8 +9,8 @@
     "pages/category/category",
     "pages/cart/cart",
     "pages/search/search_content/search_content",
-    "pages/allList/allList",
-    "pages/comments/comments"
+    "pages/comments/comments",
+    "pages/allList/allList"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    proId:0
+    proId:0,
+    pager:1
   },
 
   /**
@@ -57,13 +58,15 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.setData({
+      pager: this.data.pager + 1
+    })
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+   
   }
 })
