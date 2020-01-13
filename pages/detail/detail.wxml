@@ -137,7 +137,7 @@
   </view>
  
   <view class="footer">
-    <view class="cart">
+    <view class="cart" bindtap="goCart">
       <cover-image src="/resources/imgs/cart.png" />
       <view>购物车</view>
     </view>

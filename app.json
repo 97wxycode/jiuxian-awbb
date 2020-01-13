@@ -1,16 +1,15 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/myjx/myjx",
     "pages/profile/profile",
     "pages/location/location",
-    "pages/index/index",
     "pages/wineList/wineList",
-    "pages/comment/comment/comment",
     "pages/detail/detail",
     "pages/category/category",
     "pages/cart/cart",
-    "pages/search/search_content/search_content",
     "pages/comments/comments",
+    "pages/search/search_content/search_content",
     "pages/allList/allList"
   ],
   "window": {
