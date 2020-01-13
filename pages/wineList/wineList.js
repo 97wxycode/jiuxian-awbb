@@ -4,27 +4,27 @@ Component({
     choose: ['综合排序', '销量', '价格'],
     list: [],
     initial:'综合排序',
-    keyword:'茅台',
+    keyword: '茅台',
     index:1,
     orderBy: '1:0',
-    ascending :1
+    ascending :1,
   },
   
   lifetimes: {
-
     created() {
+      
+    },
+    ready(){
+      let keywords = app.id
       this.setData({
-        keyword: app.id
+        keyword: keywords
       })
-      console.log(app.id)
       var pages = getCurrentPages()    //获取加载的页面
-
       var currentPage = pages[pages.length - 1]    //获取当前页面的对象
-
-      var options = currentPage       
+      var options = currentPage
       this.requestData(this.data.keyword, this.data.index, this.data.orderBy)
+      console.log(this.data)
     }
-    
   },
   methods: {
     requestData(keyword, index, orderBy) {
@@ -98,6 +98,11 @@ Component({
             list
           })
         }
+      })
+    },
+    clickToSearch() {
+      wx.navigateTo({
+        url: "/pages/search/search_content/search_content"
       })
     }
   }

@@ -1,10 +1,7 @@
 // pages/search/search_content/search_content.js.js
-// const app = getApp()
+const app = getApp()
 const myPackage = require('weui-miniprogram')
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
 
   },
@@ -12,8 +9,7 @@ Component({
   data: {
     keywords: '',
     list: [],
-    searchRecord: [],
-    historyList: wx.getStorageSync('searchRecord') || []
+    searchRecord: wx.getStorageSync('searchRecord') || [],
   },
   lifetimes: {
     created: function () {
@@ -57,8 +53,6 @@ Component({
           wx.setStorageSync('searchRecord', searchRecord)
         }
       }
-
-      console.log(this.data.searchRecord, '0000')
       return new Promise((resolve, reject) => {
         resolve()
       })
@@ -99,15 +93,22 @@ Component({
       this.setData({
         keywords: ''
       })
-      // try {
-      //   wx.clearStorageSync()
-      // } catch (e) {
-      //   wx.showToast({
-      //     title: e,
-      //     icon: 'success',
-      //     duration: 2000
-      //   })
-      // }
+    },
+    handVal(e){
+      let hisVal = e.currentTarget.dataset.hisval
+      console.log(hisVal)
+      app.setId(hisVal)
+      wx.navigateTo({
+        url: '/pages/wineList/wineList?keyword=' + hisVal,
+      })
+    },
+    handListVal(e){
+      let name = e.currentTarget.dataset.name
+      app.setId(name)
+      wx.navigateTo({
+        url: '/pages/wineList/wineList?keyword=' + name,
+      })
+      console.log(name)
     },
     openHistorySearch: function () {
       this.setData({

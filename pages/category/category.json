@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "分类",
      
-  "usingComponents": {}
+  "usingComponents": {
+    "search":"../../components/search/search"
+  }
 }
