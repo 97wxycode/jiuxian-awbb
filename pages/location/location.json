@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "wux-picker":"../../miniprogram_npm/wux-weapp/picker/index",
+    "wux-cell-group": "../../miniprogram_npm/wux-weapp/cell-group/index",
+      "wux-cell": "../../miniprogram_npm/wux-weapp/cell/index",
+    "wux-button": "../../miniprogram_npm/wux-weapp/button/index"
+  },
+  "navigationBarTitleText": "地址选择"
+}
