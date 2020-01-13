@@ -72,6 +72,8 @@ Page({
         displayValue2:'-- 请选择 --',
         displayValue3:'',
         disable3:true,
+      },() =>{
+        console.log(this.data.disable3)
       })
     } else if (index === '2'){
       let city = e.detail.label

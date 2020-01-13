@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/location/location",
     "pages/index/index",
+    "pages/location/location",
     "pages/wineList/wineList",
     "pages/comment/comment/comment",
     "pages/detail/detail",

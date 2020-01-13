@@ -55,8 +55,8 @@
             bind:confirm="onConfirm" 
             bind:valueChange="onValueChange"
             disabled="{{disable3}}"
-           
             >
+           
             <wux-cell 
               title="区/县" 
               is-link 
