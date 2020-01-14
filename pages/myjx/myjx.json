@@ -3,5 +3,7 @@
   "navigationBarTitleText": "我的酒仙",
   "navigationBarTextStyle":"white",
   "component":true,
-  "usingComponents": {}
+  "usingComponents": {
+    "mp-dialog": "/miniprogram_npm/weui-miniprogram/dialog/dialog"
+  }
 }

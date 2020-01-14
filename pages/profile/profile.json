@@ -1,4 +1,7 @@
 {
-  "component":true,
+  "navigationBarBackgroundColor": "#CF4E3E",
+  "navigationBarTitleText": "我的酒仙",
+  "navigationBarTextStyle": "white",
+  "component": true,
   "usingComponents": {}
 }

@@ -12,6 +12,8 @@ Component({
     }
   },
   methods:{
-   
+   back(){
+     wx.navigateBack({});
+   }
   }
 })

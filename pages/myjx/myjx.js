@@ -97,7 +97,8 @@ const app=getApp();
 
 Component({
   data:{
-    showOneButtonDialog:false
+    dialogShow: false,
+    userInfo:{}
   },
   methods: {
     getUserInfo(res){
@@ -111,11 +112,9 @@ Component({
         success:(res)=>{
           const userInfo = res.data.data.userInfo;
           console.log(res.data.data.userInfo);
-          wx.redirectTo({
-            url: '/pages/profile/profile',
-            success:()=>{
-              app.setUserInfo(userInfo);
-            }
+          this.setData({
+            dialogShow: true,
+            userInfo
           });
         },
         fail:(err)=>{
@@ -123,9 +122,17 @@ Component({
         }
       })
     },
-    tapOneDialogButton(e) {
+    openProfilePage(){
+      wx.navigateTo({
+        url: '/pages/profile/profile',
+        success: () => {
+          app.setUserInfo(this.data.userInfo);
+        }
+      });
+    },
+    tapDialogButton(e) {
       this.setData({
-        showOneButtonDialog: true
+        dialogShow: false
       })
     },
     toAllList() {

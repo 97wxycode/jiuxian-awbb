@@ -1,4 +1,8 @@
-<view>
-  <image url="{{userInfo.avatarUrl}}"></image>
-  <text>{{userInfo.nickName}}</text>
+<view class="pro-center">
+  <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+  <text>昵称：{{userInfo.nickName}}</text>
+  <text wx:if="userInfo.gender===1">性别：男</text>
+  <text wx:elif="userInfo.gender===2">性别：女</text>
+  <text wx:else>性别：未知</text>
+  <button bindtap="back">返回</button>
 </view>

@@ -1,15 +1,18 @@
-
+<mp-dialog title="提示" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{[{text: '确认'}]}}">
+  <view>登录成功</view>
+</mp-dialog>
 <view class="top-mine">
   <view class="top-profile-wrapper">
-    <view class="login-btn">
-      <!-- <view bindtap="login">登录注册</view> -->
+    <text class="nick-name" wx:if="{{userInfo.nickName}}">{{userInfo.nickName}}</text>
+    <view class="login-btn" wx:else>
       <button class="login-register-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录注册</button>
-      <cover-image class="profile-arrow"    src="/resources/myjx/arrow.gif"></cover-image>
+      <image class="profile-arrow" src="/resources/myjx/arrow.gif"></image>
     </view>
     <view>
-      <cover-image class="profile"  src="/resources/myjx/profile.gif"></cover-image>
+      <image class="profile" src="{{userInfo.avatarUrl}}" bindtap="openProfilePage" wx:if="{{userInfo.avatarUrl}}"></image>
+      <image class="profile" src="/resources/myjx/profile.gif" bindtap="openProfilePage" wx:else></image>
     </view>
-   </view>
+  </view>
 </view>
 <view class="bar">
   <view class="bar-top">
@@ -18,53 +21,50 @@
   </view>
   <view class="bar-buttom">
     <navigator class="bar-button" url="/pages/allList/allList?status=1">
-      <cover-image class="bar-img" src="/resources/myjx/topbar1.png" />
-      待付款
+      <image class="bar-img" src="/resources/myjx/topbar1.png" /> 待付款
     </navigator>
     <navigator class="bar-button" url="/pages/allList/allList?status=2">
-      <cover-image class="bar-img" src="/resources/myjx/topbar2.png" />
-      待发货
+      <image class="bar-img" src="/resources/myjx/topbar2.png" /> 待发货
     </navigator>
     <navigator class="bar-button" url="/pages/allList/allList?status=3">
-      <cover-image class="bar-img" src="/resources/myjx/topbar3.png" />
-      待收货
+      <image class="bar-img" src="/resources/myjx/topbar3.png" /> 待收货
     </navigator>
   </view>
-  
+
 </view>
 <view class="func-wrapper">
   <view class="func">
-    <cover-image class="func-img" src="/resources/myjx/item1.gif"></cover-image>
+    <image class="func-img" src="/resources/myjx/item1.gif"></image>
     <text class="func-text">待领取</text>
     <text class="func-arrow">-></text>
   </view>
   <view class="func">
-    <cover-image class="func-img" src="/resources/myjx/item2.gif"></cover-image>
+    <image class="func-img" src="/resources/myjx/item2.gif"></image>
     <text class="func-text">商品兑换</text>
     <text class="func-arrow">-></text>
   </view>
   <view class="func">
-    <cover-image class="func-img" src="/resources/myjx/item3.gif"></cover-image>
+    <image class="func-img" src="/resources/myjx/item3.gif"></image>
     <text class="func-text">优惠券</text>
     <text class="func-arrow">-></text>
   </view>
   <view class="func">
-    <cover-image class="func-img" src="/resources/myjx/item4.gif"></cover-image>
+    <image class="func-img" src="/resources/myjx/item4.gif"></image>
     <text class="func-text">津贴</text>
     <text class="func-arrow">-></text>
   </view>
   <view class="func">
-    <cover-image class="func-img" src="/resources/myjx/item5.gif"></cover-image>
+    <image class="func-img" src="/resources/myjx/item5.gif"></image>
     <text class="func-text">地址管理</text>
     <text class="func-arrow">-></text>
   </view>
   <view class="func">
-    <cover-image class="func-img" src="/resources/myjx/item6.gif"></cover-image>
+    <image class="func-img" src="/resources/myjx/item6.gif"></image>
     <text class="func-text">会员频道兑换记录</text>
     <text class="func-arrow">-></text>
   </view>
   <view class="func">
-    <cover-image class="func-img" src="/resources/myjx/item6.gif"></cover-image>
+    <image class="func-img" src="/resources/myjx/item6.gif"></image>
     <text class="func-text">会员频道</text>
     <text class="func-arrow">-></text>
   </view>
