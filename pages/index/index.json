@@ -7,5 +7,6 @@
     "activity-count":"./components/activity-count/activity-count",
     "shop-list":"./components/shop-list/shop-list"
   },
+  "backgroundTextStyle": "dark",
   "enablePullDownRefresh": true
 }
